@@ -1,9 +1,9 @@
 import { styled } from '@stitches/react';
 import React, { ReactElement } from 'react';
-import { SearchIcon } from '../../components/icons/SearchIcon';
+import SearchIcon from '../../components/icons/search.svg';
 import { theme } from '../../styles/stitches.config';
 
-const SEARCH_ICON_SIZE = 24;
+const SEARCH_ICON_SIZE = 20;
 
 interface SearchInputProps {}
 
@@ -12,12 +12,13 @@ export const SearchInput = ({}: SearchInputProps): ReactElement => {
     <Container>
       <SearchIconContainer>
         <SearchIcon
-          size={SEARCH_ICON_SIZE}
-          color={theme.colors.primary.toString()}
+          width={SEARCH_ICON_SIZE}
+          height={SEARCH_ICON_SIZE}
+          fill={theme.colors.primary.toString()}
         />
       </SearchIconContainer>
 
-      <Input placeholder="Search for recipes..." />
+      <Input placeholder="Search for spice recipes..." />
     </Container>
   );
 };
