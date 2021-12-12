@@ -9,6 +9,7 @@ import { Recipe } from '../recipes/models';
 import { SearchInput } from '../components/SearchInput';
 import recipesData from '../data/recipes.json';
 import { objectToArray } from '../utils/objectToArray';
+import { useCallback, useState } from 'react';
 
 interface Props {
   recipes: Recipe[];
@@ -27,6 +28,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 };
 
 export default function Home({ recipes }: Props) {
+  const [filter, setFilter] = useState('');
+
+  const filteredRecipes =
+    filter.length > 1
+      ? recipes.filter(recipe =>
+          recipe.title.toLowerCase().includes(filter.toLowerCase()),
+        )
+      : recipes;
+
+  const onChangeFilter = useCallback((text: string) => {
+    setFilter(text);
+  }, []);
+
   return (
     <div>
       <Head />
@@ -36,11 +50,11 @@ export default function Home({ recipes }: Props) {
 
         <PageContainer>
           <SearchInputContainer>
-            <SearchInput />
+            <SearchInput value={filter} onChangeText={onChangeFilter} />
           </SearchInputContainer>
 
           <CardsContainer>
-            {recipes.map((recipe, index) => {
+            {filteredRecipes.map((recipe, index) => {
               // we need to render a Spacer after every odd item for our column gap to work
               const isOddItem = index % 2 === 0;
 

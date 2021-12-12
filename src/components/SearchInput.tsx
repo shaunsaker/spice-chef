@@ -1,13 +1,26 @@
 import { styled } from '@stitches/react';
-import React, { ReactElement } from 'react';
+import React, { ChangeEvent, ReactElement, useCallback } from 'react';
 import SearchIcon from './icons/search.svg';
 import { theme } from '../styles/stitches.config';
 
 const SEARCH_ICON_SIZE = 20;
 
-interface SearchInputProps {}
+interface SearchInputProps {
+  value: string;
+  onChangeText: (text: string) => void;
+}
 
-export const SearchInput = ({}: SearchInputProps): ReactElement => {
+export const SearchInput = ({
+  value,
+  onChangeText,
+}: SearchInputProps): ReactElement => {
+  const onChange = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      onChangeText(event.target.value);
+    },
+    [onChangeText],
+  );
+
   return (
     <Container>
       <SearchIconContainer>
@@ -18,7 +31,11 @@ export const SearchInput = ({}: SearchInputProps): ReactElement => {
         />
       </SearchIconContainer>
 
-      <Input placeholder="Search for spice recipes..." />
+      <Input
+        placeholder="Search for spice recipes..."
+        value={value}
+        onChange={onChange}
+      />
     </Container>
   );
 };
