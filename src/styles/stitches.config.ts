@@ -11,10 +11,16 @@ export const {
   config,
 } = createStitches({
   theme: {
+    transitions: {
+      fast: '0.167s',
+    },
     colors: {
       primary: '#C94C19',
       accent: '#C9A218',
       white: '#FFFFFF',
+      border: '#C2C9D6',
+      primaryText: '#2E3233',
+      secondaryText: '#5C6466',
     },
     fonts: {
       primary: 'Source Sans Pro',
@@ -44,6 +50,7 @@ export const globalStyles = globalCss({
     margin: 0,
     padding: 0,
     fontFamily: "'Source Sans Pro', sans-serif",
+    boxSizing: 'border-box',
   },
   '@font-face': [
     {
