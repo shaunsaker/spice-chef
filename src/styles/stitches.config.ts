@@ -18,6 +18,7 @@ export const {
       primary: '#C94C19',
       accent: '#C9A218',
       white: '#FFFFFF',
+      transWhite: 'rgba(255, 255, 255, 0.8)',
       border: '#C2C9D6',
       primaryText: '#2E3233',
       secondaryText: '#5C6466',
@@ -35,6 +36,7 @@ export const {
     space: {
       small: '8px',
       large: '16px',
+      extraLarge: '32px',
     },
   },
   utils: {
