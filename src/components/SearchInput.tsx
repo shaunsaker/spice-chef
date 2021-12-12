@@ -1,7 +1,7 @@
 import { styled } from '@stitches/react';
 import React, { ReactElement } from 'react';
-import SearchIcon from '../../components/icons/search.svg';
-import { theme } from '../../styles/stitches.config';
+import SearchIcon from './icons/search.svg';
+import { theme } from '../styles/stitches.config';
 
 const SEARCH_ICON_SIZE = 20;
 

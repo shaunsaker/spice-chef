@@ -42,9 +42,7 @@ const Container = styled('div', {
   alignItems: 'flex-end',
   backgroundColor: theme.colors.border,
   borderRadius: 20,
-  width: 'calc(50% - 8px)',
   height: 200,
-  marginBottom: theme.space.large,
   overflow: 'hidden',
 });
 
