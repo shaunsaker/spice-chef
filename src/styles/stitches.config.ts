@@ -14,7 +14,28 @@ export const {
     colors: {
       primary: '#C94C19',
       accent: '#C9A218',
+      white: '#FFFFFF',
     },
+    fonts: {
+      primary: 'Source Sans Pro',
+      logo: 'Playfair Display',
+    },
+    fontSizes: {
+      title: '24px',
+      heading: '20px',
+      regular: '16px',
+      small: '12px',
+    },
+    space: {
+      small: '8px',
+      large: '16px',
+    },
+  },
+  utils: {
+    size: value => ({
+      width: value,
+      height: value,
+    }),
   },
 });
 
