@@ -9,6 +9,10 @@ interface DishChipProps extends RecipeDish {}
 export const DishChip = ({ id }: DishChipProps): ReactElement => {
   const dish = dishesData[id] as Dish;
 
+  if (!dish) {
+    return null;
+  }
+
   return (
     <Container>
       <Text>{dish.title}</Text>

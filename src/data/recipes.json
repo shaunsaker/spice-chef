@@ -1,26 +1,201 @@
 {
-  "sazon": {
-    "id": "sazon",
+  "Sazón": {
+    "id": "Sazón",
     "title": "Sazón",
-    "description": "An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt.",
+    "description": "Maybe you’ve seen those orange boxes of Goya Sazón at your local grocery store. It’s a miracle ingredient, a punch of MSG with enough other spices to flavor just about any soup, stew, bean dish, or braise. It’s an incredible cheat, and so full of sodium it might give you a migraine. I’ll admit that I have a box in my pantry right now in case of emergency. But I think you can do better.",
     "imageUri": "https://assets.epicurious.com/photos/5aac33b00999fb6721cf08df/master/w_1280,c_limit/Spring-Cookbook-Preview-cookbook-inset-1-3032018.jpg",
     "countryCode": "ES",
-    "dishes": [{ "id": "stew" }, { "id": "stew" }],
+    "dishes": [{ "id": "Soup" }, { "id": "Stew" }],
     "ingredients": [
-      { "id": "coriander", "quantity": 1, "toasted": true },
-      { "id": "coriander", "quantity": 1, "toasted": true }
+      {
+        "id": "Garlic Powder",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Onion Powder",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Cumin Seeds",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Turmeric",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "id": "Salt",
+        "quantity": 2,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Paprika",
+        "quantity": 2,
+        "unit": "tbsp"
+      }
     ]
   },
-  "sazon2": {
-    "id": "sazon2",
-    "title": "Sazón",
-    "description": "An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt.",
-    "imageUri": "https://assets.epicurious.com/photos/5aac33b00999fb6721cf08df/master/w_1280,c_limit/Spring-Cookbook-Preview-cookbook-inset-1-3032018.jpg",
-    "countryCode": "ES",
-    "dishes": [{ "id": "stew" }, { "id": "stew" }],
+  "Montreal Steak Seasoning": {
+    "id": "Montreal Steak Seasoning",
+    "title": "Montreal Steak Seasoning",
+    "description": "Why buy this classic steak rub when you can make it yourself? Inspired by the flavors of pastrami, this rub is good on more than just steaks—try rubbing it on chicken, salmon, or even broccoli before grilling or pan-roasting.",
+    "imageUri": "https://assets.epicurious.com/photos/574df6a90863574f52b4032e/master/w_1280,c_limit/EP_05312016_-Montreal_Steak_Seasoning_.jpg",
+    "countryCode": "CA",
+    "dishes": [
+      { "id": "Steak" },
+      { "id": "Chicken" },
+      { "id": "Salmon" },
+      { "id": "Vegetables" }
+    ],
     "ingredients": [
-      { "id": "coriander", "quantity": 1, "toasted": true },
-      { "id": "coriander", "quantity": 1, "toasted": true }
+      {
+        "id": "Black Peppercorns",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": true
+      },
+      {
+        "id": "Mustard Seeds",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": true
+      },
+      {
+        "id": "Dill Seeds",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": true
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": true
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 0.5,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Chillies",
+        "quantity": 1,
+        "unit": "tsp"
+      }
+    ]
+  },
+  "Ras-El-Hanout": {
+    "id": "Ras-El-Hanout",
+    "title": "Ras-El-Hanout",
+    "description": "This vibrant spice blend makes an excellent addition to lamb burgers or roasted chicken. Store in an airtight container in a cool, dark, dry place.",
+    "imageUri": "https://assets.epicurious.com/photos/579fa1483a12dd9d5602406f/master/w_1280,c_limit/moroccan-spice-blend.jpg",
+    "countryCode": "MO",
+    "dishes": [{ "id": "Lamb" }, { "id": "Chicken" }],
+    "ingredients": [
+      {
+        "id": "Cumin Seeds",
+        "quantity": 2,
+        "unit": "tsp"
+      },
+      {
+        "id": "Ginger Powder",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "id": "Cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "id": "Allspice",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Cloves",
+        "quantity": 0.5,
+        "unit": "tsp"
+      }
+    ]
+  },
+  "Dukkah": {
+    "id": "Dukkah",
+    "title": "Dukkah",
+    "description": "An Egyptian spice blend that is wonderful. The more you eat it the more addictive it becomes. Serve with toasted crusty bread (Turkish bread is great for this), and olive oil. Dip bread into olive oil, then into the hazelnut mixture and enjoy this unique and addictive mix.",
+    "imageUri": "https://assets.epicurious.com/photos/54ac856619925f464b3ab295/master/w_1280,c_limit/51234450_radishes-with-dukkah_1x1.jpg",
+    "countryCode": "EG",
+    "dishes": [{ "id": "Bread" }, { "id": "Vegetables" }],
+    "ingredients": [
+      {
+        "id": "Pistachios",
+        "quantity": 0.25,
+        "unit": "cup"
+      },
+      {
+        "id": "Pine Nuts",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Sesame Seeds",
+        "quantity": 1,
+        "unit": "tbsp"
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Cumin Seeds",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 1,
+        "unit": "tsp"
+      }
     ]
   }
 }

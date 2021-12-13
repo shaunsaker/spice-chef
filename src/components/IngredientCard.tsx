@@ -9,12 +9,17 @@ interface IngredientCardProps extends RecipeIngredient {}
 export const IngredientCard = ({
   id,
   quantity,
+  unit,
   toasted,
 }: IngredientCardProps): ReactElement => {
   const ingredient = ingredientsData[id] as Ingredient;
 
+  if (!ingredient) {
+    return null;
+  }
+
   return (
-    <Text>{`- ${quantity} ${ingredient.unit} ${ingredient.title}${
+    <Text>{`${quantity} ${unit} ${ingredient.title}${
       toasted ? ' (toasted)' : ''
     }`}</Text>
   );

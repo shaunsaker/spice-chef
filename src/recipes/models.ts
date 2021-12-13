@@ -4,6 +4,7 @@ import { IngredientId } from '../ingredients/models';
 export interface RecipeIngredient {
   id: IngredientId;
   quantity: number;
+  unit: string;
   toasted: boolean;
 }
 
