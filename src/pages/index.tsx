@@ -1,15 +1,15 @@
-import { Card } from '../components/Card';
-import { Head } from '../components/Head';
-import { HeaderBar } from '../components/HeaderBar';
 import { styled, theme } from '../styles/stitches.config';
-import ReactCountryFlag from 'react-country-flag';
-import { CountryFlag } from '../components/CountryFlag';
 import { GetStaticProps } from 'next';
 import { Recipe } from '../recipes/models';
 import { SearchInput } from '../components/SearchInput';
 import recipesData from '../data/recipes.json';
 import { objectToArray } from '../utils/objectToArray';
 import { useCallback, useState } from 'react';
+import { Page } from '../components/Page';
+import Link from 'next/link';
+import { HeaderBar } from '../components/HeaderBar';
+import { RecipeCard } from '../components/RecipeCard';
+import { Grid } from '../components/Grid';
 
 interface Props {
   recipes: Recipe[];
@@ -42,61 +42,33 @@ export default function Home({ recipes }: Props) {
   }, []);
 
   return (
-    <div>
-      <Head />
+    <Page>
+      <HeaderBar />
 
-      <main>
-        <HeaderBar />
+      <Container>
+        <SearchInputContainer>
+          <SearchInput value={filter} onChangeText={onChangeFilter} />
+        </SearchInputContainer>
 
-        <PageContainer>
-          <SearchInputContainer>
-            <SearchInput value={filter} onChangeText={onChangeFilter} />
-          </SearchInputContainer>
-
-          <CardsContainer>
-            {filteredRecipes.map((recipe, index) => {
-              // we need to render a Spacer after every odd item for our column gap to work
-              const isOddItem = index % 2 === 0;
-
-              return (
-                <CardContainer key={recipe.title}>
-                  <Card
-                    title={recipe.title}
-                    backgroundImage={recipe.imageUri}
-                    cornerComponent={
-                      <CountryFlag countryCode={recipe.countryCode} />
-                    }
-                  />
-
-                  {isOddItem && <Spacer />}
-                </CardContainer>
-              );
-            })}
-          </CardsContainer>
-        </PageContainer>
-      </main>
-    </div>
+        <Grid
+          data={filteredRecipes}
+          renderItem={recipe => (
+            <Link href={`/recipe/${recipe.id}`} passHref>
+              <div>
+                <RecipeCard {...recipe} />
+              </div>
+            </Link>
+          )}
+        />
+      </Container>
+    </Page>
   );
 }
 
-const PageContainer = styled('div', {
+const Container = styled('div', {
   margin: `0 ${theme.space.large}`,
 });
 
 const SearchInputContainer = styled('div', {
   margin: `${theme.space.large} 0 ${theme.space.extraLarge}`,
-});
-
-const Spacer = styled('div', {
-  width: theme.space.large,
-});
-
-const CardsContainer = styled('div', {
-  display: 'flex',
-  flexWrap: 'wrap',
-});
-
-const CardContainer = styled('div', {
-  width: 'calc(50% - 8px)',
-  marginBottom: theme.space.large,
 });

@@ -5,23 +5,19 @@ import { theme } from '../styles/stitches.config';
 interface CardProps {
   title: string;
   subtitle?: string;
-  backgroundImage?: string;
   cornerComponent?: ReactNode;
+  children?: ReactNode;
 }
 
 export const Card = ({
   title,
   subtitle,
-  backgroundImage,
   cornerComponent,
+  children,
 }: CardProps): ReactElement => {
   return (
     <Container>
-      {backgroundImage && (
-        <BackgroundImage
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        />
-      )}
+      {children}
 
       <TextContainer>
         <TitleText>{title}</TitleText>
@@ -51,6 +47,7 @@ const TextContainer = styled('div', {
   backgroundColor: theme.colors.transWhite,
   padding: `${theme.space.small} ${theme.space.large}`,
   borderRadius: 16,
+  textAlign: 'center',
 });
 
 const TitleText = styled('div', {
@@ -61,17 +58,7 @@ const TitleText = styled('div', {
 
 const SubtitleText = styled('div', {
   fontSize: theme.fontSizes.regular,
-  fontWeight: 700,
   color: theme.colors.secondaryText,
-});
-
-const BackgroundImage = styled('div', {
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  backgroundSize: 'cover',
 });
 
 const CornerContainer = styled('div', {

@@ -1,7 +1,26 @@
 {
   "sazon": {
+    "id": "sazon",
     "title": "Sazón",
+    "description": "An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt.",
     "imageUri": "https://assets.epicurious.com/photos/5aac33b00999fb6721cf08df/master/w_1280,c_limit/Spring-Cookbook-Preview-cookbook-inset-1-3032018.jpg",
-    "countryCode": "ES"
+    "countryCode": "ES",
+    "dishes": [{ "id": "stew" }, { "id": "stew" }],
+    "ingredients": [
+      { "id": "coriander", "quantity": 1, "toasted": true },
+      { "id": "coriander", "quantity": 1, "toasted": true }
+    ]
+  },
+  "sazon2": {
+    "id": "sazon2",
+    "title": "Sazón",
+    "description": "An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt. An ancient spice from Egypt.",
+    "imageUri": "https://assets.epicurious.com/photos/5aac33b00999fb6721cf08df/master/w_1280,c_limit/Spring-Cookbook-Preview-cookbook-inset-1-3032018.jpg",
+    "countryCode": "ES",
+    "dishes": [{ "id": "stew" }, { "id": "stew" }],
+    "ingredients": [
+      { "id": "coriander", "quantity": 1, "toasted": true },
+      { "id": "coriander", "quantity": 1, "toasted": true }
+    ]
   }
 }

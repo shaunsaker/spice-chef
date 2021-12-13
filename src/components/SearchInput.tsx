@@ -7,7 +7,7 @@ const SEARCH_ICON_SIZE = 20;
 
 interface SearchInputProps {
   value: string;
-  onChangeText: (text: string) => void;
+  onChangeText: (_text: string) => void;
 }
 
 export const SearchInput = ({
