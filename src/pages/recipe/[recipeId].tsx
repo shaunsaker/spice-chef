@@ -51,42 +51,40 @@ export default function Recipe({ recipe }: Props): ReactElement {
       <Container>
         <HeaderBar showBack />
 
-        <Image src={recipe.imageUri} alt={recipe.title} />
-
         <ContentContainer>
-          <ContentHeaderContainer>
-            <TitleText>{recipe.title}</TitleText>
+          <Image src={recipe.imageUri} alt={recipe.title} />
 
-            <FlagContainer>
-              <CountryFlag countryCode={recipe.countryCode} />
-            </FlagContainer>
-          </ContentHeaderContainer>
+          <DetailsContainer>
+            <ContentHeaderContainer>
+              <TitleText>{recipe.title}</TitleText>
 
-          <DescriptionText>{recipe.description}</DescriptionText>
+              <FlagContainer>
+                <CountryFlag countryCode={recipe.countryCode} />
+              </FlagContainer>
+            </ContentHeaderContainer>
 
-          <HeadingText>Works well with</HeadingText>
+            <DescriptionText>{recipe.description}</DescriptionText>
 
-          <DishesContainer>
-            {recipe.dishes.map(recipeDish => (
-              <DishContainer key={recipeDish.id}>
-                <DishChip id={recipeDish.id} />
-              </DishContainer>
-            ))}
-          </DishesContainer>
+            <HeadingText>Works well with</HeadingText>
 
-          <HeadingText>Ingredients</HeadingText>
+            <DishesContainer>
+              {recipe.dishes.map(recipeDish => (
+                <DishContainer key={recipeDish.id}>
+                  <DishChip id={recipeDish.id} />
+                </DishContainer>
+              ))}
+            </DishesContainer>
 
-          <IngredientsContainer>
-            <Grid
-              data={recipe.ingredients}
-              renderItem={recipeIngredient => (
-                <IngredientContainer>
+            <HeadingText>Ingredients</HeadingText>
+
+            <IngredientsContainer>
+              {recipe.ingredients.map(recipeIngredient => (
+                <IngredientContainer key={recipeIngredient.id}>
                   <IngredientCard {...recipeIngredient} />
                 </IngredientContainer>
-              )}
-              numberOfColumns={1}
-            />
-          </IngredientsContainer>
+              ))}
+            </IngredientsContainer>
+          </DetailsContainer>
         </ContentContainer>
       </Container>
     </Page>
@@ -97,6 +95,11 @@ const Container = styled('div', {
   position: 'relative',
 });
 
+const ContentContainer = styled('div', {
+  maxWidth: 720,
+  margin: '0 auto',
+});
+
 const Image = styled('img', {
   width: '100%',
   minHeight: 250,
@@ -104,7 +107,7 @@ const Image = styled('img', {
 
 const CONTENT_CONTAINER_BORDER_RADIUS = 30;
 
-const ContentContainer = styled('div', {
+const DetailsContainer = styled('div', {
   marginTop: -CONTENT_CONTAINER_BORDER_RADIUS,
   position: 'relative', // needed for negative margin over image (stacking context is ignored)
   borderRadius: `${CONTENT_CONTAINER_BORDER_RADIUS}px ${CONTENT_CONTAINER_BORDER_RADIUS}px 0 0`,

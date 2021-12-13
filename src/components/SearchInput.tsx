@@ -42,6 +42,8 @@ export const SearchInput = ({
 
 const Container = styled('div', {
   position: 'relative',
+  maxWidth: 360,
+  margin: '0 auto',
 });
 
 const SEARCH_ICON_LEFT = 16;

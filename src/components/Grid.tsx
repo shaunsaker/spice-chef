@@ -4,21 +4,15 @@ import { styled, theme } from '../styles/stitches.config';
 interface GridProps<T> {
   data: T[];
   renderItem: (_item: T) => ReactElement;
-  numberOfColumns?: number;
 }
 
 export const Grid = <T extends { id: string }>({
   data,
   renderItem,
-  numberOfColumns = 2,
 }: GridProps<T>): ReactElement => {
   return (
     <Container>
       {data.map((item, index) => {
-        if (numberOfColumns === 1) {
-          return renderItem(item);
-        }
-
         // we need to render a Spacer after every odd item for our column gap to work
         const isOddItem = index % 2 === 0;
 
@@ -40,8 +34,12 @@ const Container = styled('div', {
 });
 
 const ItemContainer = styled('div', {
-  width: 'calc(50% - 8px)',
+  width: `calc(50% - 8px)`,
   marginBottom: theme.space.large,
+
+  '@media (min-width: 1024px)': {
+    width: `calc(25% - 24px)`,
+  },
 });
 
 const Spacer = styled('div', {
