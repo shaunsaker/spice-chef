@@ -8,7 +8,7 @@ import { objectToArray } from '../../utils/objectToArray';
 import { HeaderBar } from '../../components/HeaderBar';
 import { styled, theme } from '../../styles/stitches.config';
 import { CountryFlag } from '../../components/CountryFlag';
-import { DishIcon } from '../../components/DishIcon';
+import { DishChip } from '../../components/DishChip';
 import { IngredientCard } from '../../components/IngredientCard';
 import { Grid } from '../../components/Grid';
 
@@ -69,7 +69,7 @@ export default function Recipe({ recipe }: Props): ReactElement {
           <DishesContainer>
             {recipe.dishes.map(recipeDish => (
               <DishContainer key={recipeDish.id}>
-                <DishIcon id={recipeDish.id} />
+                <DishChip id={recipeDish.id} />
               </DishContainer>
             ))}
           </DishesContainer>
@@ -149,9 +149,7 @@ const DishesContainer = styled('div', {
 });
 
 const DishContainer = styled('div', {
-  marginRight: theme.space.large,
+  marginRight: theme.space.small,
 });
 
 const IngredientsContainer = styled('div', {});
-
-const IngredientContainer = styled('div', {});
