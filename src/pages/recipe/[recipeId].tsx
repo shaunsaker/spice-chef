@@ -80,8 +80,11 @@ export default function Recipe({ recipe }: Props): ReactElement {
             <Grid
               data={recipe.ingredients}
               renderItem={recipeIngredient => (
-                <IngredientCard {...recipeIngredient} />
+                <IngredientContainer>
+                  <IngredientCard {...recipeIngredient} />
+                </IngredientContainer>
               )}
+              numberOfColumns={1}
             />
           </IngredientsContainer>
         </ContentContainer>
@@ -153,3 +156,7 @@ const DishContainer = styled('div', {
 });
 
 const IngredientsContainer = styled('div', {});
+
+const IngredientContainer = styled('div', {
+  marginBottom: theme.space.small,
+});
