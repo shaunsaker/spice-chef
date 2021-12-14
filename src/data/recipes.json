@@ -243,45 +243,146 @@
     ],
     "ingredients": [
       {
-        "id": " tsp Ginger Powder",
+        "id": "Ginger Powder",
         "quantity": "1",
-        "unit": "",
+        "unit": "tsp",
         "toasted": false
       },
       {
-        "id": " tsp Cumin Seeds",
+        "id": "Cumin Seeds",
         "quantity": "2",
-        "unit": "",
+        "unit": "tsp",
         "toasted": false
       },
       {
-        "id": " tsp Coriander Seeds",
+        "id": "Coriander Seeds",
         "quantity": "2",
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Paprika",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Turmeric",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Salt",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false
+      }
+    ]
+  },
+  "Berbere": {
+    "id": "Berbere",
+    "title": "Berbere",
+    "description": "Berbere is a chile and spice blend used to season many Ethiopian dishes. Because authentic berbere can be hard to find, we developed our own recipe.",
+    "countryCode": "ET",
+    "imageUri": "https://assets.epicurious.com/photos/579f967b3a12dd9d56024067/master/w_1280,c_limit/ethiopian-spice-mix-berbere.jpg",
+    "dishes": [
+      {
+        "id": "Steak"
+      },
+      {
+        "id": "Lamb"
+      },
+      {
+        "id": "Chicken"
+      },
+      {
+        "id": "Vegetables"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Fenugreek Seeds",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Chillies",
+        "quantity": 0.5,
+        "unit": "cup",
+        "toasted": false
+      },
+      {
+        "id": "Paprika",
+        "quantity": 0.25,
+        "unit": "cup",
+        "toasted": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false
+      },
+      {
+        "id": "Ginger Powder",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "tsp Onion Powder",
+        "quantity": 1,
         "unit": "",
         "toasted": false
       },
       {
-        "id": " tsp Paprika",
-        "quantity": "1",
-        "unit": "",
+        "id": "Cardamom Seeds",
+        "quantity": 1,
+        "unit": "tsp",
         "toasted": false
       },
       {
-        "id": " tsp Turmeric",
-        "quantity": "1",
-        "unit": "",
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp",
         "toasted": false
       },
       {
-        "id": " tsp Salt",
-        "quantity": "1",
-        "unit": "",
+        "id": "Nutmeg",
+        "quantity": 0.25,
+        "unit": "tsp",
         "toasted": false
       },
       {
-        "id": " tsp Cayenne Pepper",
-        "quantity": "1",
-        "unit": "",
+        "id": "Garlic Powder",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Cloves",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Cinnamon",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false
+      },
+      {
+        "id": "Allspice",
+        "quantity": 0.25,
+        "unit": "tsp",
         "toasted": false
       }
     ]
