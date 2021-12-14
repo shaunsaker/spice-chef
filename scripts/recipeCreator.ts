@@ -62,15 +62,15 @@ const createNewRecipe = async (): Promise<Recipe> => {
   recipe.dishes = response.dishes.map(string => ({ id: string }));
 
   recipe.ingredients = response.ingredients.map(string => {
-    // TODO: fix the spitting
     const quantity = string.split(' ')[0];
-    const unit = string.split(quantity)[0];
-    const name = string.split(quantity)[1].replace('*', '');
+    const quantityNumber = parseFloat(quantity);
+    const unit = string.split(' ')[1];
+    const name = string.split(`${quantity} ${unit} `)[1].replace('*', '');
     const toasted = string.includes('*');
 
     return {
       id: name,
-      quantity,
+      quantity: quantityNumber,
       unit,
       toasted,
     };
