@@ -12,8 +12,10 @@ export interface RecipeDish {
   id: DishId;
 }
 
+type RecipeId = string;
+
 export interface Recipe {
-  id: string;
+  id: RecipeId;
   title: string;
   description: string;
   imageUri: string;
@@ -21,3 +23,5 @@ export interface Recipe {
   dishes: RecipeDish[];
   ingredients: RecipeIngredient[];
 }
+
+export type Recipes = Record<RecipeId, Recipe>;
