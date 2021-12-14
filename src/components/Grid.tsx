@@ -4,23 +4,20 @@ import { styled, theme } from '../styles/stitches.config';
 interface GridProps<T> {
   data: T[];
   renderItem: (_item: T) => ReactElement;
+  containerMargin: number; // we use this to calculate our negative margin for spacing to work
 }
 
 export const Grid = <T extends { id: string }>({
   data,
   renderItem,
+  containerMargin,
 }: GridProps<T>): ReactElement => {
   return (
-    <Container>
-      {data.map((item, index) => {
-        // we need to render a Spacer after every odd item for our column gap to work
-        const isOddItem = index % 2 === 0;
-
+    <Container style={{ margin: `0 -${containerMargin}px` }}>
+      {data.map(item => {
         return (
           <>
             <ItemContainer key={item.id}>{renderItem(item)}</ItemContainer>
-
-            {isOddItem && <Spacer />}
           </>
         );
       })}
@@ -31,17 +28,14 @@ export const Grid = <T extends { id: string }>({
 const Container = styled('div', {
   display: 'flex',
   flexWrap: 'wrap',
+  padding: `0 ${theme.space.small}`, // FIXME: how to use token and create a relationship between the 2
 });
 
 const ItemContainer = styled('div', {
-  width: `calc(50% - 8px)`,
-  marginBottom: theme.space.large,
+  width: '50%',
+  padding: `0 ${theme.space.small} ${theme.space.large}`,
 
   '@media (min-width: 1024px)': {
-    width: `calc(25% - 24px)`,
+    width: '25%',
   },
-});
-
-const Spacer = styled('div', {
-  width: theme.space.large,
 });
