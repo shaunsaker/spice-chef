@@ -17,37 +17,44 @@
       {
         "id": "Garlic Powder",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Onion Powder",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Cumin Seeds",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Turmeric",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Black Peppercorns",
         "quantity": 0.5,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Salt",
         "quantity": 2,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Paprika",
         "quantity": 2,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       }
     ]
   },
@@ -99,17 +106,20 @@
       {
         "id": "Salt",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Garlic Powder",
         "quantity": 0.5,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Chillies",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       }
     ]
   },
@@ -131,27 +141,32 @@
       {
         "id": "Cumin Seeds",
         "quantity": 2,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Ginger Powder",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Salt",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Black Peppercorns",
         "quantity": 0.75,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Cinnamon",
         "quantity": 0.5,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Coriander Seeds",
@@ -161,17 +176,20 @@
       {
         "id": "Cayenne Pepper",
         "quantity": 0.5,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Allspice",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Cloves",
         "quantity": 0.5,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       }
     ]
   },
@@ -193,37 +211,44 @@
       {
         "id": "Pistachios",
         "quantity": 0.25,
-        "unit": "cup"
+        "unit": "cup",
+        "toasted": false
       },
       {
         "id": "Pine Nuts",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Sesame Seeds",
         "quantity": 1,
-        "unit": "tbsp"
+        "unit": "tbsp",
+        "toasted": false
       },
       {
         "id": "Coriander Seeds",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Cumin Seeds",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Salt",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       },
       {
         "id": "Black Peppercorns",
         "quantity": 1,
-        "unit": "tsp"
+        "unit": "tsp",
+        "toasted": false
       }
     ]
   },

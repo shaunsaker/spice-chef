@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const recipes = objectToArray(recipesData);
+  const recipes = objectToArray(recipesData) as Recipe[];
 
   const props: Props = {
     recipes,

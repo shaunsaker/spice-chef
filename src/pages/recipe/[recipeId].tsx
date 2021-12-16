@@ -10,7 +10,6 @@ import { styled, theme } from '../../styles/stitches.config';
 import { CountryFlag } from '../../components/CountryFlag';
 import { DishChip } from '../../components/DishChip';
 import { IngredientCard } from '../../components/IngredientCard';
-import { Grid } from '../../components/Grid';
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
