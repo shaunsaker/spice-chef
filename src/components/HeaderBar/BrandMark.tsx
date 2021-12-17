@@ -1,13 +1,16 @@
 import React, { ReactElement } from 'react';
 import { styled, theme } from '../../styles/stitches.config';
+import Link from 'next/link';
 
 interface BrandMarkProps {}
 
 export const BrandMark = ({}: BrandMarkProps): ReactElement => {
   return (
-    <Container>
-      <Text>S</Text>
-    </Container>
+    <Link href="/" passHref>
+      <Container>
+        <Text>S</Text>
+      </Container>
+    </Link>
   );
 };
 
@@ -20,6 +23,7 @@ const Container = styled('div', {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  cursor: 'pointer',
 });
 
 const Text = styled('div', {
