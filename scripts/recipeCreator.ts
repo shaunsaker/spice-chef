@@ -67,12 +67,14 @@ const createNewRecipe = async (): Promise<Recipe> => {
     const unit = string.split(' ')[1];
     const name = string.split(`${quantity} ${unit} `)[1].replace('*', '');
     const toasted = string.includes('*');
+    const ground = string.includes('!');
 
     return {
       id: name,
       quantity: quantityNumber,
       unit,
       toasted,
+      ground,
     };
   });
 
