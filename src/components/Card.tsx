@@ -40,6 +40,14 @@ const Container = styled('div', {
   borderRadius: 20,
   height: 200,
   overflow: 'hidden',
+  cursor: 'pointer',
+  boxSizing: 'border-box',
+  border: `2px solid ${theme.colors.border}`,
+  transition: `border-color ${theme.transitions.fast} ease`,
+
+  '&:hover': {
+    borderColor: theme.colors.accent,
+  },
 });
 
 const TextContainer = styled('div', {

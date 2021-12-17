@@ -102,9 +102,10 @@ const ContentContainer = styled('div', {
 const Image = styled('img', {
   width: '100%',
   minHeight: 250,
+  borderRadius: 20,
 });
 
-const CONTENT_CONTAINER_BORDER_RADIUS = 30;
+const CONTENT_CONTAINER_BORDER_RADIUS = 50;
 
 const DetailsContainer = styled('div', {
   marginTop: -CONTENT_CONTAINER_BORDER_RADIUS,
