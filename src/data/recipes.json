@@ -459,5 +459,91 @@
         "ground": true
       }
     ]
+  },
+  "Creole Seasoning": {
+    "id": "Creole Seasoning",
+    "title": "Creole Seasoning",
+    "description": "This Creole seasoning blend is great for seasoning rice, meats, soups and stews, or anything that needs a flavor boost. Also makes a great gift when placed in a decorative jar with recipe attached.",
+    "countryCode": "WI",
+    "imageUri": "https://assets.epicurious.com/photos/57a38481c9298e544959193e/master/w_1280,c_limit/creole-seasoning.jpg",
+    "dishes": [
+      {
+        "id": "Rice"
+      },
+      {
+        "id": "Chicken"
+      },
+      {
+        "id": "Soup"
+      },
+      {
+        "id": "Stew"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Paprika",
+        "quantity": 2.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Origanum",
+        "quantity": 1.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Basil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": 0.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Onion Powder",
+        "quantity": 0.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Thyme",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
   }
 }
