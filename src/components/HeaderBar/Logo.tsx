@@ -10,6 +10,6 @@ export const Logo = ({}: LogoProps): ReactElement => {
 
 const Container = styled('div', {
   fontFamily: theme.fonts.logo,
-  fontSize: theme.fontSizes.heading,
+  fontSize: theme.fontSizes.title,
   color: theme.colors.primaryText,
 });
