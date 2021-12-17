@@ -15,11 +15,7 @@ export const Grid = <T extends { id: string }>({
   return (
     <Container style={{ margin: `0 -${containerMargin}px` }}>
       {data.map(item => {
-        return (
-          <>
-            <ItemContainer key={item.id}>{renderItem(item)}</ItemContainer>
-          </>
-        );
+        return <ItemContainer key={item.id}>{renderItem(item)}</ItemContainer>;
       })}
     </Container>
   );
