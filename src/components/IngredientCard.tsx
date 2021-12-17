@@ -4,6 +4,22 @@ import ingredientsData from '../data/ingredients.json';
 import { Ingredient } from '../ingredients/models';
 import { styled, theme } from '../styles/stitches.config';
 
+const getInstructionsText = (ground: boolean, toasted: boolean): string => {
+  if (ground && toasted) {
+    return '(ground and toasted)';
+  }
+
+  if (ground) {
+    return '(ground)';
+  }
+
+  if (toasted) {
+    return '(toasted)';
+  }
+
+  return '';
+};
+
 interface IngredientCardProps extends RecipeIngredient {}
 
 export const IngredientCard = ({
@@ -11,6 +27,7 @@ export const IngredientCard = ({
   quantity,
   unit,
   toasted,
+  ground,
 }: IngredientCardProps): ReactElement => {
   const ingredient = ingredientsData[id] as Ingredient;
 
@@ -19,9 +36,10 @@ export const IngredientCard = ({
   }
 
   return (
-    <Text>{`${quantity} ${unit} ${ingredient.title}${
-      toasted ? ' (toasted)' : ''
-    }`}</Text>
+    <Text>
+      {quantity} {unit} {ingredient.title}{' '}
+      {getInstructionsText(ground, toasted)}
+    </Text>
   );
 };
 

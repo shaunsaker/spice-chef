@@ -6,6 +6,7 @@ export interface RecipeIngredient {
   quantity: number;
   unit: string;
   toasted: boolean;
+  ground: boolean;
 }
 
 export interface RecipeDish {
