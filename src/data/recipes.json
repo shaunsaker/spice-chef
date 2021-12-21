@@ -545,5 +545,85 @@
         "ground": false
       }
     ]
+  },
+  "Chimichurri": {
+    "id": "Chimichurri",
+    "title": "Chimichurri",
+    "description": "In Argentina, this mix of herbs and spices is combined with oil and vinegar and used as a sauce for grilled meats. For best results, use dried herb leaves—not powdered or ground.",
+    "countryCode": "AR",
+    "imageUri": "https://assets.epicurious.com/photos/5b2a8f239803be36206193e4/master/w_1280,c_limit/dry-chimichurri-rub-recipe-062018.jpg",
+    "dishes": [
+      {
+        "id": "Steak"
+      },
+      {
+        "id": "Chicken"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Origanum",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Basil",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Parsley",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Thyme",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Mint",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Smoked Paprika",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Chillies",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
   }
 }
