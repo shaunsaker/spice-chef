@@ -1,0 +1,130 @@
+{
+  "Garlic Powder": {
+    "id": "Garlic Powder",
+    "title": "Garlic Powder"
+  },
+  "Salt": {
+    "id": "Salt",
+    "title": "Coarse Salt"
+  },
+  "Sesame Seeds": {
+    "id": "Sesame Seeds",
+    "title": "Sesame Seeds"
+  },
+  "Ginger Powder": {
+    "id": "Ginger Powder",
+    "title": "Ginger Powder"
+  },
+  "Onion Powder": {
+    "id": "Onion Powder",
+    "title": "Onion Powder"
+  },
+  "Cayenne Pepper": {
+    "id": "Cayenne Pepper",
+    "title": "Cayenne Pepper"
+  },
+  "Mace": {
+    "id": "Mace",
+    "title": "Mace"
+  },
+  "Paprika": {
+    "id": "Paprika",
+    "title": "Paprika"
+  },
+  "Chillies": {
+    "id": "Chillies",
+    "title": "Chilli Flakes"
+  },
+  "Smoked Paprika": {
+    "id": "Smoked Paprika",
+    "title": "Smoked Paprika"
+  },
+  "Curry Leaves": {
+    "id": "Curry Leaves",
+    "title": "Curry Leaves"
+  },
+  "Parsley": {
+    "id": "Parsley",
+    "title": "Parsley"
+  },
+  "Bay Leaves": {
+    "id": "Bay Leaves",
+    "title": "Bay Leaves"
+  },
+  "Origanum": {
+    "id": "Origanum",
+    "title": "Origanum"
+  },
+  "Basil": {
+    "id": "Basil",
+    "title": "Basil"
+  },
+  "Fenugreek Seeds": {
+    "id": "Fenugreek Seeds",
+    "title": "Fenugreek Seeds"
+  },
+  "Turmeric": {
+    "id": "Turmeric",
+    "title": "Turmeric"
+  },
+  "Cinnamon": {
+    "id": "Cinnamon",
+    "title": "Cinnamon"
+  },
+  "Dill Seeds": {
+    "id": "Dill Seeds",
+    "title": "Dill Seeds"
+  },
+  "Coriander Seeds": {
+    "id": "Coriander Seeds",
+    "title": "Coriander Seeds"
+  },
+  "Cumin Seeds": {
+    "id": "Cumin Seeds",
+    "title": "Cumin Seeds"
+  },
+  "Cardamom Seeds": {
+    "id": "Cardamom Seeds",
+    "title": "Cardamom Seeds"
+  },
+  "Nutmeg": {
+    "id": "Nutmeg",
+    "title": "Nutmeg"
+  },
+  "Thyme": {
+    "id": "Thyme",
+    "title": "Thyme"
+  },
+  "Aniseed": {
+    "id": "Aniseed",
+    "title": "Aniseed"
+  },
+  "Allspice": {
+    "id": "Allspice",
+    "title": "Allspice"
+  },
+  "Black Peppercorns": {
+    "id": "Black Peppercorns",
+    "title": "Black Peppercorns"
+  },
+  "Star Anise": {
+    "id": "Star Anise",
+    "title": "Star Anise"
+  },
+  "Mustard Seeds": {
+    "id": "Mustard Seeds",
+    "title": "Mustard Seeds"
+  },
+  "Cloves": {
+    "id": "Cloves",
+    "title": "Cloves"
+  },
+  "Pistachios": {
+    "id": "Pistachios",
+    "title": "Pistachios"
+  },
+  "Pine Nuts": {
+    "id": "Pine Nuts",
+    "title": "Pine Nuts"
+  }
+}

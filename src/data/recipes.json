@@ -1,0 +1,629 @@
+{
+  "Sazón": {
+    "id": "Sazón",
+    "title": "Sazón",
+    "description": "Maybe you’ve seen those orange boxes of Goya Sazón at your local grocery store. It’s a miracle ingredient, a punch of MSG with enough other spices to flavor just about any soup, stew, bean dish, or braise. It’s an incredible cheat, and so full of sodium it might give you a migraine. I’ll admit that I have a box in my pantry right now in case of emergency. But I think you can do better.",
+    "imageUri": "https://assets.epicurious.com/photos/5aac33b00999fb6721cf08df/master/w_1280,c_limit/Spring-Cookbook-Preview-cookbook-inset-1-3032018.jpg",
+    "countryCode": "ES",
+    "dishes": [
+      {
+        "id": "Soup"
+      },
+      {
+        "id": "Stew"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Garlic Powder",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Onion Powder",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cumin Seeds",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Turmeric",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Salt",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Paprika",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
+  },
+  "Montreal Steak Seasoning": {
+    "id": "Montreal Steak Seasoning",
+    "title": "Montreal Steak Seasoning",
+    "description": "Why buy this classic steak rub when you can make it yourself? Inspired by the flavors of pastrami, this rub is good on more than just steaks—try rubbing it on chicken, salmon, or even broccoli before grilling or pan-roasting.",
+    "imageUri": "https://assets.epicurious.com/photos/574df6a90863574f52b4032e/master/w_1280,c_limit/EP_05312016_-Montreal_Steak_Seasoning_.jpg",
+    "countryCode": "CA",
+    "dishes": [
+      {
+        "id": "Steak"
+      },
+      {
+        "id": "Chicken"
+      },
+      {
+        "id": "Salmon"
+      },
+      {
+        "id": "Vegetables"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Black Peppercorns",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": true,
+        "ground": true
+      },
+      {
+        "id": "Mustard Seeds",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": true,
+        "ground": true
+      },
+      {
+        "id": "Dill Seeds",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": true,
+        "ground": true
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": true,
+        "ground": true
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 0.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Chillies",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
+  },
+  "Ras-El-Hanout": {
+    "id": "Ras-El-Hanout",
+    "title": "Ras-El-Hanout",
+    "description": "This vibrant spice blend makes an excellent addition to lamb burgers or roasted chicken. Store in an airtight container in a cool, dark, dry place.",
+    "imageUri": "https://assets.epicurious.com/photos/579fa1483a12dd9d5602406f/master/w_1280,c_limit/moroccan-spice-blend.jpg",
+    "countryCode": "MO",
+    "dishes": [
+      {
+        "id": "Lamb"
+      },
+      {
+        "id": "Chicken"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Cumin Seeds",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Ginger Powder",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 0.75,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Cinnamon",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp"
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Allspice",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Cloves",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      }
+    ]
+  },
+  "Dukkah": {
+    "id": "Dukkah",
+    "title": "Dukkah",
+    "description": "An Egyptian spice blend that is wonderful. The more you eat it the more addictive it becomes. Serve with toasted crusty bread (Turkish bread is great for this), and olive oil. Dip bread into olive oil, then into the hazelnut mixture and enjoy this unique and addictive mix.",
+    "imageUri": "https://assets.epicurious.com/photos/54ac856619925f464b3ab295/master/w_1280,c_limit/51234450_radishes-with-dukkah_1x1.jpg",
+    "countryCode": "EG",
+    "dishes": [
+      {
+        "id": "Bread"
+      },
+      {
+        "id": "Vegetables"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Pistachios",
+        "quantity": 0.25,
+        "unit": "cup",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Pine Nuts",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Sesame Seeds",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Cumin Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      }
+    ]
+  },
+  "Tandoori": {
+    "id": "Tandoori",
+    "title": "Tandoori",
+    "description": "This traditional spice blend is a popular part of Indian cuisine. The blend can be easily made at home to top various dishes for an added burst of that traditional tandoori flavor.. With spices that you may already have on hand, such as paprika, coriander, and cayenne pepper, this blend comes together in a snap and can be stored in an airtight container for later use.",
+    "countryCode": "IN",
+    "imageUri": "https://assets.epicurious.com/photos/57bb35ad06de447f4e6d9344/master/w_1280,c_limit/tandoori-spice-blend.jpg",
+    "dishes": [
+      {
+        "id": "Lamb"
+      },
+      {
+        "id": "Chicken"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Ginger Powder",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cumin Seeds",
+        "quantity": "2",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": "2",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Paprika",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Turmeric",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": "1",
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
+  },
+  "Berbere": {
+    "id": "Berbere",
+    "title": "Berbere",
+    "description": "Berbere is a chile and spice blend used to season many Ethiopian dishes. Because authentic berbere can be hard to find, we developed our own recipe.",
+    "countryCode": "ET",
+    "imageUri": "https://assets.epicurious.com/photos/579f967b3a12dd9d56024067/master/w_1280,c_limit/ethiopian-spice-mix-berbere.jpg",
+    "dishes": [
+      {
+        "id": "Steak"
+      },
+      {
+        "id": "Lamb"
+      },
+      {
+        "id": "Chicken"
+      },
+      {
+        "id": "Vegetables"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Fenugreek Seeds",
+        "quantity": 0.5,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Chillies",
+        "quantity": 0.5,
+        "unit": "cup",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Paprika",
+        "quantity": 0.25,
+        "unit": "cup",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Ginger Powder",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Onion Powder",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cardamom Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Coriander Seeds",
+        "quantity": 1,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Nutmeg",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cloves",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Cinnamon",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Allspice",
+        "quantity": 0.25,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      }
+    ]
+  },
+  "Creole Seasoning": {
+    "id": "Creole Seasoning",
+    "title": "Creole Seasoning",
+    "description": "This Creole seasoning blend is great for seasoning rice, meats, soups and stews, or anything that needs a flavor boost. Also makes a great gift when placed in a decorative jar with recipe attached.",
+    "countryCode": "WI",
+    "imageUri": "https://assets.epicurious.com/photos/57a38481c9298e544959193e/master/w_1280,c_limit/creole-seasoning.jpg",
+    "dishes": [
+      {
+        "id": "Rice"
+      },
+      {
+        "id": "Chicken"
+      },
+      {
+        "id": "Soup"
+      },
+      {
+        "id": "Stew"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Paprika",
+        "quantity": 2.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Origanum",
+        "quantity": 1.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Black Peppercorns",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Basil",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Cayenne Pepper",
+        "quantity": 0.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Onion Powder",
+        "quantity": 0.5,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Thyme",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
+  },
+  "Chimichurri": {
+    "id": "Chimichurri",
+    "title": "Chimichurri",
+    "description": "In Argentina, this mix of herbs and spices is combined with oil and vinegar and used as a sauce for grilled meats. For best results, use dried herb leaves—not powdered or ground.",
+    "countryCode": "AR",
+    "imageUri": "https://assets.epicurious.com/photos/5b2a8f239803be36206193e4/master/w_1280,c_limit/dry-chimichurri-rub-recipe-062018.jpg",
+    "dishes": [
+      {
+        "id": "Steak"
+      },
+      {
+        "id": "Chicken"
+      }
+    ],
+    "ingredients": [
+      {
+        "id": "Origanum",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Basil",
+        "quantity": 3,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Parsley",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Thyme",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Salt",
+        "quantity": 2,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Mint",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": false
+      },
+      {
+        "id": "Smoked Paprika",
+        "quantity": 1,
+        "unit": "tbsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Garlic Powder",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": true
+      },
+      {
+        "id": "Chillies",
+        "quantity": 2,
+        "unit": "tsp",
+        "toasted": false,
+        "ground": false
+      }
+    ]
+  }
+}

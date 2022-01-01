@@ -1,0 +1,38 @@
+{
+  "Stew": {
+    "id": "Stew",
+    "title": "Stew"
+  },
+  "Soup": {
+    "id": "Soup",
+    "title": "Soup"
+  },
+  "Steak": {
+    "id": "Steak",
+    "title": "Steak"
+  },
+  "Chicken": {
+    "id": "Chicken",
+    "title": "Chicken"
+  },
+  "Lamb": {
+    "id": "Lamb",
+    "title": "Lamb"
+  },
+  "Salmon": {
+    "id": "Salmon",
+    "title": "Salmon"
+  },
+  "Vegetables": {
+    "id": "Vegetables",
+    "title": "Vegetables"
+  },
+  "Bread": {
+    "id": "Bread",
+    "title": "Bread"
+  },
+  "Rice": {
+    "id": "Rice",
+    "title": "Rice"
+  }
+}
