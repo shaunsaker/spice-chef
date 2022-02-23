@@ -10,6 +10,7 @@ import { styled, theme } from '../../styles/stitches.config';
 import { CountryFlag } from '../../components/CountryFlag';
 import { DishChip } from '../../components/DishChip';
 import { IngredientCard } from '../../components/IngredientCard';
+import { CloseIcon } from '../../components/CloseIcon';
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
@@ -48,7 +49,9 @@ export default function Recipe({ recipe }: Props): ReactElement {
   return (
     <Page>
       <Container>
-        <HeaderBar showBack />
+        <HeaderBar>
+          <CloseIcon />
+        </HeaderBar>
 
         <ContentContainer>
           <Image src={recipe.imageUri} alt={recipe.title} />

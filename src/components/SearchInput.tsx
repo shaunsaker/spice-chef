@@ -3,7 +3,7 @@ import React, { ChangeEvent, ReactElement, useCallback } from 'react';
 import SearchIcon from './icons/search.svg';
 import { theme } from '../styles/stitches.config';
 
-const SEARCH_ICON_SIZE = 20;
+const SEARCH_ICON_SIZE = 16;
 
 interface SearchInputProps {
   value: string;
@@ -27,12 +27,12 @@ export const SearchInput = ({
         <SearchIcon
           width={SEARCH_ICON_SIZE}
           height={SEARCH_ICON_SIZE}
-          fill={theme.colors.primary.toString()}
+          fill={theme.colors.primaryText.toString()}
         />
       </SearchIconContainer>
 
       <Input
-        placeholder="Search for spice recipes..."
+        placeholder="Search for recipes..."
         value={value}
         onChange={onChange}
       />
@@ -57,16 +57,13 @@ const SearchIconContainer = styled('div', {
   alignItems: 'center',
 });
 
-const HEIGHT = 50;
+const HEIGHT = 40;
 
 const Input = styled('input', {
   width: '100%',
   height: HEIGHT,
-  borderRadius: HEIGHT / 2,
-  borderWidth: 2,
-  borderColor: theme.colors.border,
-  transition: `border-color ${theme.transitions.fast} ease`,
-  borderStyle: 'solid',
+  borderRadius: theme.borderRadius.small,
+  border: 'none',
   outline: 'none',
   padding: `0 ${HEIGHT / 2}px`,
   paddingLeft: SEARCH_ICON_LEFT + SEARCH_ICON_SIZE + 8,
@@ -74,9 +71,13 @@ const Input = styled('input', {
   fontWeight: 600,
   color: theme.colors.primaryText,
   caretColor: theme.colors.accent,
+  boxShadow:
+    '0px 4px 6px 0px rgb(50 50 93 / 11%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
+  transition: 'all 0.2s ease-in-out',
 
   '&:focus': {
-    borderColor: theme.colors.accent,
+    boxShadow:
+      '0px 4px 10px 0px rgb(50 50 93 / 23%), 0px 1px 3px 0px rgb(0 0 0 / 8%);',
   },
 
   '&::placeholder': {

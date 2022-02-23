@@ -43,13 +43,11 @@ export default function Home({ recipes }: Props) {
 
   return (
     <Page>
-      <HeaderBar />
+      <HeaderBar>
+        <SearchInput value={filter} onChangeText={onChangeFilter} />
+      </HeaderBar>
 
       <Container>
-        <SearchInputContainer>
-          <SearchInput value={filter} onChangeText={onChangeFilter} />
-        </SearchInputContainer>
-
         <Grid
           data={filteredRecipes}
           renderItem={recipe => (
@@ -68,8 +66,4 @@ export default function Home({ recipes }: Props) {
 
 const Container = styled('div', {
   margin: `0 ${theme.space.large}`,
-});
-
-const SearchInputContainer = styled('div', {
-  margin: `${theme.space.large} 0 ${theme.space.extraLarge}`,
 });

@@ -1,48 +1,30 @@
-import React, { ReactElement, useCallback } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import { styled, theme } from '../../styles/stitches.config';
 import { BrandMark } from './BrandMark';
-import CloseIcon from '../icons/close.svg';
 import Link from 'next/link';
-import { Button } from '../Button';
-import { SUPPORT_EMAIL } from '../../config';
-
-const BACK_ICON_SIZE = 20;
+import { ContentContainer } from '../ContentContainer';
 
 interface HeaderBarProps {
-  showBack?: boolean;
+  children?: ReactNode;
 }
 
-export const HeaderBar = ({ showBack }: HeaderBarProps): ReactElement => {
+export const HeaderBar = ({ children }: HeaderBarProps): ReactElement => {
   return (
     <Wrapper>
       <Container>
-        <ContentContainer>
+        <StyledContentContainer>
           <LogoContainer>
-            <BrandMarkContainer>
-              <BrandMark />
-            </BrandMarkContainer>
+            <Link href="/" passHref>
+              <BrandMarkContainer>
+                <BrandMark />
+              </BrandMarkContainer>
+            </Link>
 
             <LogoText>Spice Chef</LogoText>
           </LogoContainer>
 
-          <RightContainer>
-            <Button href={`mailto:${SUPPORT_EMAIL}`}>Contact</Button>
-
-            {showBack && (
-              <CloseButtonContainer>
-                <Link href="/" passHref>
-                  <CloseIconContainer>
-                    <CloseIcon
-                      width={BACK_ICON_SIZE}
-                      height={BACK_ICON_SIZE}
-                      fill={theme.colors.primaryText.toString()}
-                    />
-                  </CloseIconContainer>
-                </Link>
-              </CloseButtonContainer>
-            )}
-          </RightContainer>
-        </ContentContainer>
+          <RightContainer>{children}</RightContainer>
+        </StyledContentContainer>
       </Container>
 
       <Spacer />
@@ -68,23 +50,19 @@ const Container = styled('div', {
   height: HEADER_HEIGHT,
   backgroundColor: theme.colors.white,
   boxShadow: 'rgb(0 0 0 / 10%) 0px 1px 15px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
 });
 
-const ContentContainer = styled('div', {
-  maxWidth: theme.sizes.maxContentWidth,
-  width: '100%',
-  padding: `0 ${theme.space.large}`,
+const StyledContentContainer = styled(ContentContainer, {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  padding: `0 ${theme.space.large}`,
 });
 
 const LogoContainer = styled('div', {
   display: 'flex',
   alignItems: 'center',
+  cursor: 'pointer',
 });
 
 const LogoText = styled('div', {
@@ -99,15 +77,5 @@ const BrandMarkContainer = styled('div', {
 });
 
 const RightContainer = styled('div', {
-  display: 'flex',
-  alignItems: 'center',
-});
-
-const CloseButtonContainer = styled('div', {
   marginLeft: theme.space.large,
-});
-
-const CloseIconContainer = styled('div', {
-  cursor: 'pointer',
-  display: 'flex',
 });
