@@ -38,6 +38,12 @@ export const {
       large: '16px',
       extraLarge: '32px',
     },
+    borderRadius: {
+      small: '4px',
+    },
+    sizes: {
+      maxContentWidth: '1030px',
+    },
   },
   utils: {
     size: value => ({
