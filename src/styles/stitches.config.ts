@@ -12,7 +12,7 @@ export const {
 } = createStitches({
   theme: {
     transitions: {
-      fast: '0.167s',
+      default: 'all 0.2s ease-in-out',
     },
     colors: {
       primary: '#C94C19',
@@ -31,7 +31,13 @@ export const {
       title: '24px',
       heading: '20px',
       regular: '16px',
-      small: '12px',
+      small: '14px',
+    },
+    lineHeights: {
+      title: '32px',
+      heading: '28px',
+      regular: '24px',
+      small: '16px',
     },
     space: {
       small: '8px',

@@ -1,26 +1,50 @@
-import React, { ReactElement, ReactNode } from 'react';
-import { styled, theme } from '../../styles/stitches.config';
-import { BrandMark } from './BrandMark';
+import React, {
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
+import { styled, theme } from '../styles/stitches.config';
 import Link from 'next/link';
-import { ContentContainer } from '../ContentContainer';
+import { ContentContainer } from './ContentContainer';
 
 interface HeaderBarProps {
   children?: ReactNode;
 }
 
 export const HeaderBar = ({ children }: HeaderBarProps): ReactElement => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  const onBodyScroll = useCallback(() => {
+    const scrollOffset = window.pageYOffset;
+
+    if (scrollOffset === 0) {
+      setHasScrolled(false);
+    } else {
+      setHasScrolled(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', onBodyScroll);
+
+    return () => window.removeEventListener('scroll', onBodyScroll);
+  });
+
   return (
     <Wrapper>
-      <Container>
+      <Container hasScrolled={hasScrolled}>
         <StyledContentContainer>
           <LogoContainer>
             <Link href="/" passHref>
-              <BrandMarkContainer>
-                <BrandMark />
-              </BrandMarkContainer>
+              <LogoText>
+                Spice{' '}
+                <span style={{ color: theme.colors.primary.toString() }}>
+                  Chef
+                </span>
+              </LogoText>
             </Link>
-
-            <LogoText>Spice Chef</LogoText>
           </LogoContainer>
 
           <RightContainer>{children}</RightContainer>
@@ -48,8 +72,16 @@ const Container = styled('div', {
   right: 0,
   zIndex: 2,
   height: HEADER_HEIGHT,
-  backgroundColor: theme.colors.white,
-  boxShadow: 'rgb(0 0 0 / 10%) 0px 1px 15px',
+  transition: theme.transitions.default,
+
+  variants: {
+    hasScrolled: {
+      true: {
+        backgroundColor: theme.colors.white,
+        boxShadow: 'rgb(0 0 0 / 10%) 0px 1px 15px',
+      },
+    },
+  },
 });
 
 const StyledContentContainer = styled(ContentContainer, {
@@ -70,10 +102,10 @@ const LogoText = styled('div', {
   fontSize: theme.fontSizes.heading,
   color: theme.colors.primaryText,
   marginBottom: 4, // vertical alignment
-});
 
-const BrandMarkContainer = styled('div', {
-  marginRight: theme.space.small,
+  '& > span': {
+    fontFamily: theme.fonts.logo,
+  },
 });
 
 const RightContainer = styled('div', {

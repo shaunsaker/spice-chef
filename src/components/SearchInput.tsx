@@ -67,13 +67,13 @@ const Input = styled('input', {
   outline: 'none',
   padding: `0 ${HEIGHT / 2}px`,
   paddingLeft: SEARCH_ICON_LEFT + SEARCH_ICON_SIZE + 8,
-  fontSize: theme.fontSizes.regular,
+  fontSize: theme.fontSizes.small,
   fontWeight: 600,
   color: theme.colors.primaryText,
   caretColor: theme.colors.accent,
   boxShadow:
     '0px 4px 6px 0px rgb(50 50 93 / 11%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
-  transition: 'all 0.2s ease-in-out',
+  transition: theme.transitions.default,
 
   '&:focus': {
     boxShadow:

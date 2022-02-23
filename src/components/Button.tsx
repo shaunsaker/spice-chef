@@ -25,7 +25,7 @@ const Container = styled('a', {
   borderRadius: theme.borderRadius.small,
   boxShadow:
     '0px 4px 6px 0px rgb(50 50 93 / 11%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
-  transition: 'all 0.2s ease-in-out',
+  transition: theme.transitions.default,
 
   '&:hover': {
     boxShadow:

@@ -43,7 +43,7 @@ const Container = styled('div', {
   cursor: 'pointer',
   boxSizing: 'border-box',
   border: `2px solid ${theme.colors.border}`,
-  transition: `border-color ${theme.transitions.fast} ease`,
+  transition: theme.transitions.default,
 
   '&:hover': {
     borderColor: theme.colors.accent,

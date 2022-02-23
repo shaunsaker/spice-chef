@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { HeaderBar } from '../components/HeaderBar';
 import { RecipeCard } from '../components/RecipeCard';
 import { Grid } from '../components/Grid';
+import { Hero } from '../components/Hero';
 
 interface Props {
   recipes: Recipe[];
@@ -46,6 +47,8 @@ export default function Home({ recipes }: Props) {
       <HeaderBar>
         <SearchInput value={filter} onChangeText={onChangeFilter} />
       </HeaderBar>
+
+      <Hero />
 
       <Container>
         <Grid
