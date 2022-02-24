@@ -1,6 +1,5 @@
-import { styled } from '@stitches/react';
 import React, { ReactElement, ReactNode } from 'react';
-import { theme } from '../styles/stitches.config';
+import { styled, theme } from '../styles/stitches.config';
 
 // FIXME: How to extend StyledComponent
 interface ContentContainerProps {
@@ -29,6 +28,6 @@ const Wrapper = styled('div', {
 });
 
 const Container = styled('div', {
-  maxWidth: theme.sizes.maxContentWidth,
+  maxWidth: theme.breakpoints.desktop,
   width: '100%',
 });

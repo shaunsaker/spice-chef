@@ -47,9 +47,14 @@ export const {
     borderRadius: {
       small: '4px',
     },
-    sizes: {
-      maxContentWidth: '1030px',
+    breakpoints: {
+      tablet: '768px',
+      desktop: '1024px',
     },
+  },
+  media: {
+    tablet: '(min-width: 768px)',
+    desktop: '(min-width: 1024px)',
   },
   utils: {
     size: value => ({

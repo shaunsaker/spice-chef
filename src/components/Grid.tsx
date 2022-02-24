@@ -31,7 +31,7 @@ const ItemContainer = styled('div', {
   width: '50%',
   padding: `0 ${theme.space.small} ${theme.space.large}`,
 
-  '@media (min-width: 1024px)': {
+  '@desktop': {
     width: '25%',
   },
 });

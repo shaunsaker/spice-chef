@@ -1,6 +1,5 @@
-import { styled } from '@stitches/react';
 import React, { ReactElement } from 'react';
-import { theme } from '../styles/stitches.config';
+import { styled, theme } from '../styles/stitches.config';
 import { ContentContainer } from './ContentContainer';
 import Image from 'next/image';
 
@@ -28,12 +27,15 @@ export const Hero = ({}: HeroProps): ReactElement => {
 
         <Spacer />
 
-        <Column style={{ alignItems: 'flex-end' }}>
+        <ImageColumn>
           <Image
             src={require('../../public/images/chef.png')}
             alt="Spice Chef"
+            objectFit="contain"
+            objectPosition="right center"
+            quality={100}
           />
-        </Column>
+        </ImageColumn>
       </StyledContentContainer>
     </Container>
   );
@@ -47,19 +49,22 @@ const Container = styled('div', {
 
 const StyledContentContainer = styled(ContentContainer, {
   display: 'flex',
-  padding: theme.space.large,
+  padding: `${theme.space.extraLarge} ${theme.space.large}`,
 });
 
 const Column = styled('div', {
-  width: '50%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  alignItems: 'center',
+});
+
+const ImageColumn = styled(Column, {
+  alignItems: 'flex-end',
+  minHeight: 240,
 });
 
 const Spacer = styled('div', {
-  width: theme.space.large,
+  width: theme.space.extraLarge,
 });
 
 const TitleText = styled('div', {

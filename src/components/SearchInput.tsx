@@ -1,7 +1,6 @@
-import { styled } from '@stitches/react';
 import React, { ChangeEvent, ReactElement, useCallback } from 'react';
 import SearchIcon from './icons/search.svg';
-import { theme } from '../styles/stitches.config';
+import { styled, theme } from '../styles/stitches.config';
 
 const SEARCH_ICON_SIZE = 16;
 

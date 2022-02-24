@@ -1,6 +1,5 @@
-import { styled } from '@stitches/react';
 import React, { ReactElement } from 'react';
-import { theme } from '../styles/stitches.config';
+import { styled, theme } from '../styles/stitches.config';
 
 interface ButtonProps {
   href: string;
