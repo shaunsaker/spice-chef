@@ -11,6 +11,7 @@ import { HeaderBar } from '../components/HeaderBar';
 import { RecipeCard } from '../components/RecipeCard';
 import { Grid } from '../components/Grid';
 import { Hero } from '../components/Hero';
+import { ContentContainer } from '../components/ContentContainer';
 
 interface Props {
   recipes: Recipe[];
@@ -52,7 +53,7 @@ export default function Home({ recipes }: Props) {
         <SearchInput value={filter} onChangeText={onChangeFilter} />
       </SearchInputContainer>
 
-      <Container>
+      <StyledContentContainer>
         <Grid
           data={filteredRecipes}
           renderItem={recipe => (
@@ -62,15 +63,14 @@ export default function Home({ recipes }: Props) {
               </div>
             </Link>
           )}
-          containerMargin={16} // FIXME: how to use token
         />
-      </Container>
+      </StyledContentContainer>
     </Page>
   );
 }
 
-const Container = styled('div', {
-  margin: `0 ${theme.space.large}`,
+const StyledContentContainer = styled(ContentContainer, {
+  padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
 });
 
 const SearchInputContainer = styled('div', {
