@@ -29,14 +29,15 @@ export const Card = ({
   );
 };
 
+export const CARD_HEIGHT = 360;
+
 const Container = styled('div', {
   position: 'relative',
-  // padding: theme.space.large,
   display: 'flex',
   alignItems: 'flex-end',
   backgroundColor: theme.colors.border,
   borderRadius: theme.borderRadius.large,
-  height: 360,
+  height: CARD_HEIGHT,
   overflow: 'hidden',
   cursor: 'pointer',
   boxSizing: 'border-box',

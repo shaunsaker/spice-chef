@@ -77,8 +77,8 @@ const Container = styled('div', {
   variants: {
     hasScrolled: {
       true: {
-        backgroundColor: theme.colors.white,
-        boxShadow: 'rgb(0 0 0 / 10%) 0px 1px 15px',
+        backgroundColor: theme.colors.background,
+        boxShadow: theme.boxShadows.large,
       },
     },
   },

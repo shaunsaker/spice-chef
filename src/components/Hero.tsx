@@ -49,7 +49,6 @@ const Container = styled('div', {
 
 const StyledContentContainer = styled(ContentContainer, {
   display: 'flex',
-  padding: `${theme.space.extraLarge} ${theme.space.large}`,
 });
 
 const Column = styled('div', {

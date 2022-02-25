@@ -12,6 +12,8 @@ import { RecipeCard } from '../components/RecipeCard';
 import { Grid } from '../components/Grid';
 import { Hero } from '../components/Hero';
 import { ContentContainer } from '../components/ContentContainer';
+import { Footer } from '../components/Footer';
+import { BlankState } from '../components/BlankState';
 
 interface Props {
   recipes: Recipe[];
@@ -53,18 +55,30 @@ export default function Home({ recipes }: Props) {
         <SearchInput value={filter} onChangeText={onChangeFilter} />
       </SearchInputContainer>
 
-      <StyledContentContainer>
-        <Grid
-          data={filteredRecipes}
-          renderItem={recipe => (
-            <Link href={`/recipe/${recipe.id}`} passHref>
-              <div>
-                <RecipeCard {...recipe} />
-              </div>
-            </Link>
-          )}
-        />
-      </StyledContentContainer>
+      {/* FIXME: extract to component */}
+      {filteredRecipes.length ? (
+        <StyledContentContainer>
+          <Grid
+            data={filteredRecipes}
+            renderItem={recipe => (
+              <Link href={`/recipe/${recipe.id}`} passHref>
+                <div>
+                  <RecipeCard {...recipe} />
+                </div>
+              </Link>
+            )}
+          />
+        </StyledContentContainer>
+      ) : (
+        <BlankStateContainer>
+          <BlankState
+            title="No Comprende"
+            description="We either couldn't find what you're looking for or that recipe has alluded us."
+          />
+        </BlankStateContainer>
+      )}
+
+      <Footer />
     </Page>
   );
 }
@@ -75,4 +89,8 @@ const StyledContentContainer = styled(ContentContainer, {
 
 const SearchInputContainer = styled('div', {
   padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
+});
+
+const BlankStateContainer = styled('div', {
+  marginBottom: theme.space.large,
 });

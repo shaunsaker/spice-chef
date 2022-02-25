@@ -69,18 +69,18 @@ const Input = styled('input', {
   fontWeight: 600,
   color: theme.colors.primaryText,
   caretColor: theme.colors.accent,
+  backgroundColor: theme.colors.background,
   transition: theme.transitions.default,
   boxShadow:
     '0px 4px 6px 0px rgb(50 50 93 / 11%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
   border: `${theme.borderWidths.small} solid transparent`,
 
   '&:focus': {
-    boxShadow: theme.boxShadows.veryLarge,
+    boxShadow: theme.boxShadows.large,
     borderColor: theme.colors.accent,
   },
 
   '&::placeholder': {
-    fontWeight: 400,
     color: theme.colors.secondaryText,
   },
 });

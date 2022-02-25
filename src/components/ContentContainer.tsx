@@ -30,4 +30,5 @@ const Wrapper = styled('div', {
 const Container = styled('div', {
   maxWidth: theme.breakpoints.desktop,
   width: '100%',
+  padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
 });

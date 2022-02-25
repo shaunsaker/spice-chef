@@ -17,5 +17,5 @@ export const Page = ({ children }: PageProps): ReactElement => {
 };
 
 const Container = styled('main', {
-  background: `linear-gradient(45deg, ${theme.colors.white}, rgba(0, 0, 0, 0.05))`,
+  background: `linear-gradient(45deg, ${theme.colors.white}, ${theme.colors.background})`,
 });

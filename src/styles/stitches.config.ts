@@ -20,6 +20,7 @@ export const {
       white: '#FFFFFF',
       transWhite: 'rgba(255, 255, 255, 0.8)',
       border: '#C2C9D6',
+      background: '#F3F5F9',
       primaryText: '#2E3233',
       secondaryText: '#5C6466',
     },
