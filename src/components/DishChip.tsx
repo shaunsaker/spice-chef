@@ -23,7 +23,7 @@ export const DishChip = ({ id }: DishChipProps): ReactElement => {
 const Container = styled('div', {
   backgroundColor: theme.colors.accent,
   padding: `${theme.space.small} ${theme.space.large}`,
-  borderRadius: 20,
+  borderRadius: theme.borderRadius.small,
 });
 
 const Text = styled('div', {

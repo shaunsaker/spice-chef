@@ -8,12 +8,14 @@ interface RecipeCardProps extends Recipe {}
 
 export const RecipeCard = ({
   title,
+  ingredients,
   imageUri,
   countryCode,
 }: RecipeCardProps): ReactElement => {
   return (
     <Card
       title={title}
+      subtitle={`${ingredients.length} ingredients`}
       cornerComponent={<CountryFlag countryCode={countryCode} />}
     >
       <BackgroundImage style={{ backgroundImage: `url(${imageUri})` }} />

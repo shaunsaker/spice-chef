@@ -46,10 +46,22 @@ export const {
     },
     borderRadius: {
       small: '4px',
+      large: '8px',
     },
     breakpoints: {
       tablet: '768px',
       desktop: '1024px',
+    },
+    boxShadows: {
+      small:
+        '0px 4px 6px 0px rgb(50 50 93 / 10%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
+      large:
+        '0px 4px 12px 0px rgb(50 50 93 / 20%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
+      veryLarge:
+        '0px 4px 16px 0px rgb(50 50 93 / 33%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
+    },
+    borderWidths: {
+      small: '2px',
     },
   },
   media: {

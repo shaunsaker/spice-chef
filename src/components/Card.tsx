@@ -31,40 +31,43 @@ export const Card = ({
 
 const Container = styled('div', {
   position: 'relative',
-  padding: theme.space.large,
+  // padding: theme.space.large,
   display: 'flex',
-  justifyContent: 'center',
   alignItems: 'flex-end',
   backgroundColor: theme.colors.border,
-  borderRadius: 20,
-  height: 200,
+  borderRadius: theme.borderRadius.large,
+  height: 360,
   overflow: 'hidden',
   cursor: 'pointer',
   boxSizing: 'border-box',
-  border: `2px solid ${theme.colors.border}`,
   transition: theme.transitions.default,
+  boxShadow: theme.boxShadows.large,
+  border: `${theme.borderWidths.small} solid ${theme.colors.white}`,
 
   '&:hover': {
+    boxShadow: theme.boxShadows.veryLarge,
     borderColor: theme.colors.accent,
   },
 });
 
 const TextContainer = styled('div', {
   zIndex: 1,
-  backgroundColor: theme.colors.transWhite,
-  padding: `${theme.space.small} ${theme.space.large}`,
-  borderRadius: 16,
-  textAlign: 'center',
+  padding: theme.space.large,
+  width: '100%',
+  background: `linear-gradient(45deg, ${theme.colors.transWhite}, rgba(0, 0, 0, 0.05))`,
 });
 
 const TitleText = styled('div', {
-  fontSize: theme.fontSizes.regular,
+  fontFamily: theme.fonts.logo,
+  fontSize: theme.fontSizes.title,
+  lineHeight: theme.lineHeights.title,
   fontWeight: 700,
   color: theme.colors.primaryText,
 });
 
 const SubtitleText = styled('div', {
-  fontSize: theme.fontSizes.regular,
+  fontSize: theme.fontSizes.small,
+  lineHeight: theme.lineHeights.regular,
   color: theme.colors.secondaryText,
 });
 

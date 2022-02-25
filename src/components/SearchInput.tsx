@@ -62,7 +62,6 @@ const Input = styled('input', {
   width: '100%',
   height: HEIGHT,
   borderRadius: theme.borderRadius.small,
-  border: 'none',
   outline: 'none',
   padding: `0 ${HEIGHT / 2}px`,
   paddingLeft: SEARCH_ICON_LEFT + SEARCH_ICON_SIZE + 8,
@@ -70,13 +69,14 @@ const Input = styled('input', {
   fontWeight: 600,
   color: theme.colors.primaryText,
   caretColor: theme.colors.accent,
+  transition: theme.transitions.default,
   boxShadow:
     '0px 4px 6px 0px rgb(50 50 93 / 11%), 0px 1px 3px 0px rgb(0 0 0 / 8%)',
-  transition: theme.transitions.default,
+  border: `${theme.borderWidths.small} solid transparent`,
 
   '&:focus': {
-    boxShadow:
-      '0px 4px 10px 0px rgb(50 50 93 / 23%), 0px 1px 3px 0px rgb(0 0 0 / 8%);',
+    boxShadow: theme.boxShadows.veryLarge,
+    borderColor: theme.colors.accent,
   },
 
   '&::placeholder': {

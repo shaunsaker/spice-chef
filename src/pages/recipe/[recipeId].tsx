@@ -104,8 +104,8 @@ const ContentContainer = styled('div', {
 
 const Image = styled('img', {
   width: '100%',
-  minHeight: 250,
-  borderRadius: 20,
+  minHeight: 240,
+  borderRadius: theme.borderRadius.small,
 });
 
 const CONTENT_CONTAINER_BORDER_RADIUS = 50;
