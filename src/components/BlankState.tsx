@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import { styled, theme } from '../styles/stitches.config';
-import { CARD_HEIGHT } from './Card';
 import { ContentContainer } from './ContentContainer';
 import QuestionIcon from './icons/question-circle.svg';
 
