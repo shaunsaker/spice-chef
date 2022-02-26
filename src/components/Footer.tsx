@@ -60,7 +60,7 @@ const Text = styled('div', {
   color: theme.colors.primaryText,
 
   '& a': {
-    color: theme.colors.accent,
+    color: theme.colors.primary,
     fontWeight: 700,
   },
 });
