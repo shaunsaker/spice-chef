@@ -14,6 +14,7 @@ import { RecipeCard } from '../../components/RecipeCard';
 import { Footer } from '../../components/Footer';
 import ShareIcon from '../../components/icons/share.svg';
 import { useShare } from '../../components/useShare';
+import Head from 'next/head';
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
@@ -59,8 +60,24 @@ export default function Recipe({ recipe }: Props): ReactElement {
     });
   }, [share, recipe.title]);
 
+  const seoTitle = `Spice Chef - ${recipe.title}`;
+  const seoDescription = recipe.description;
+
   return (
     <Page>
+      <Head>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta property="og:title" content={seoTitle} />
+        <meta property="og:description" content={seoDescription} />
+        <meta
+          property="og:url"
+          content={typeof window !== 'undefined' && window.location.href}
+        />
+        <meta property="twitter:title" content={seoTitle} />
+        <meta property="twitter:description" content={seoDescription} />
+      </Head>
+
       <Container>
         <HeaderBar showBack>
           <ShareIconContainer onClick={onShareClick}>
