@@ -3,6 +3,7 @@ import { Recipe, RecipeIngredient } from '../recipes/models';
 import { styled } from '../styles/stitches.config';
 import { Card } from './Card';
 import { CountryFlag } from './CountryFlag';
+import Image from 'next/image';
 
 interface RecipeCardProps extends Omit<Recipe, 'ingredients'> {
   className?: string;
@@ -17,22 +18,23 @@ export const RecipeCard = ({
   countryCode,
 }: RecipeCardProps): ReactElement => {
   return (
-    <Card
+    <StyledCard
       className={className}
       title={title}
       subtitle={ingredients && `${ingredients.length} ingredients`}
       cornerComponent={<CountryFlag countryCode={countryCode} />}
     >
-      <BackgroundImage style={{ backgroundImage: `url(${imageUri})` }} />
-    </Card>
+      <Image
+        src={imageUri}
+        alt={title}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center center"
+      />
+    </StyledCard>
   );
 };
 
-const BackgroundImage = styled('div', {
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  backgroundSize: 'cover',
+const StyledCard = styled(Card, {
+  position: 'relative',
 });
