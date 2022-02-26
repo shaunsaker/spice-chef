@@ -32,7 +32,7 @@ export const Footer = ({}: FooterProps): ReactElement => {
 };
 
 const Container = styled('div', {
-  backgroundColor: theme.colors.background,
+  backgroundColor: theme.colors.white,
 });
 
 const StyledContentContainer = styled(ContentContainer, {
