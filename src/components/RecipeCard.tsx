@@ -30,6 +30,7 @@ export const RecipeCard = ({
         layout="fill"
         objectFit="cover"
         objectPosition="center center"
+        quality={100}
       />
     </StyledCard>
   );
