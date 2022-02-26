@@ -36,14 +36,33 @@ export const IngredientCard = ({
   }
 
   return (
-    <Text>
-      {quantity} {unit} {ingredient.title}{' '}
-      {getInstructionsText(ground, toasted)}
-    </Text>
+    <Container>
+      <TitleText>{ingredient.title}</TitleText>
+
+      <QuantityText>
+        {quantity} {unit} {getInstructionsText(ground, toasted)}
+      </QuantityText>
+    </Container>
   );
 };
 
-const Text = styled('div', {
-  fontSize: theme.fontSizes.regular,
+const Container = styled('div', {
+  borderRadius: theme.borderRadius.small,
+  boxShadow: theme.boxShadows.small,
+  backgroundColor: theme.colors.background,
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: theme.space.large,
+});
+
+const TitleText = styled('div', {
+  fontSize: theme.fontSizes.heading,
+  fontWeight: 700,
   color: theme.colors.primaryText,
+});
+
+const QuantityText = styled('div', {
+  fontSize: theme.fontSizes.small,
+  color: theme.colors.secondaryText,
 });

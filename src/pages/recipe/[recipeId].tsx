@@ -7,10 +7,13 @@ import { ParsedUrlQuery } from 'querystring';
 import { objectToArray } from '../../utils/objectToArray';
 import { HeaderBar } from '../../components/HeaderBar';
 import { styled, theme } from '../../styles/stitches.config';
-import { CountryFlag } from '../../components/CountryFlag';
 import { DishChip } from '../../components/DishChip';
 import { IngredientCard } from '../../components/IngredientCard';
-import { CloseIcon } from '../../components/CloseIcon';
+import { ContentContainer } from '../../components/ContentContainer';
+import { RecipeCard } from '../../components/RecipeCard';
+import { Footer } from '../../components/Footer';
+import ShareIcon from '../../components/icons/share.svg';
+import { useShare } from '../../components/useShare';
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
@@ -46,27 +49,29 @@ export const getStaticProps: GetStaticProps<Props, Params> = async context => {
 };
 
 export default function Recipe({ recipe }: Props): ReactElement {
+  const { share } = useShare();
+
+  const onShareClick = React.useCallback(() => {
+    share({
+      title: `${recipe.title} Recipe`,
+      text: `Here's a recipe for ${recipe.title} from Spice Chef 👨‍🍳`,
+      url: window.location.href,
+    });
+  }, [share, recipe.title]);
+
   return (
     <Page>
       <Container>
-        <HeaderBar>
-          <CloseIcon />
+        <HeaderBar showBack>
+          <ShareIconContainer onClick={onShareClick}>
+            <StyledShareIcon />
+          </ShareIconContainer>
         </HeaderBar>
 
-        <ContentContainer>
-          <Image src={recipe.imageUri} alt={recipe.title} />
+        <StyledContentContainer>
+          <StyledRecipeCard {...recipe} ingredients={undefined} />
 
           <DetailsContainer>
-            <ContentHeaderContainer>
-              <TitleText>{recipe.title}</TitleText>
-
-              <FlagContainer>
-                <CountryFlag countryCode={recipe.countryCode} />
-              </FlagContainer>
-            </ContentHeaderContainer>
-
-            <DescriptionText>{recipe.description}</DescriptionText>
-
             <HeadingText>Works well with</HeadingText>
 
             <DishesContainer>
@@ -77,7 +82,9 @@ export default function Recipe({ recipe }: Props): ReactElement {
               ))}
             </DishesContainer>
 
-            <HeadingText>Ingredients</HeadingText>
+            <HeadingText>Ingredients ({recipe.ingredients.length})</HeadingText>
+
+            <DescriptionText>{recipe.description}</DescriptionText>
 
             <IngredientsContainer>
               {recipe.ingredients.map(recipeIngredient => (
@@ -87,8 +94,10 @@ export default function Recipe({ recipe }: Props): ReactElement {
               ))}
             </IngredientsContainer>
           </DetailsContainer>
-        </ContentContainer>
+        </StyledContentContainer>
       </Container>
+
+      <Footer />
     </Page>
   );
 }
@@ -97,52 +106,61 @@ const Container = styled('div', {
   position: 'relative',
 });
 
-const ContentContainer = styled('div', {
-  maxWidth: 720,
-  margin: '0 auto',
+const ShareIconContainer = styled('button', {
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer',
+
+  '&:hover > svg': {
+    color: theme.colors.accent,
+  },
 });
 
-const Image = styled('img', {
-  width: '100%',
-  minHeight: 240,
-  borderRadius: theme.borderRadius.small,
+const StyledShareIcon = styled(ShareIcon, {
+  width: 24,
+  height: 24,
+  color: theme.colors.primaryText,
+  transition: theme.transitions.default,
 });
 
-const CONTENT_CONTAINER_BORDER_RADIUS = 50;
+const StyledRecipeCard = styled(RecipeCard, {
+  border: 'none',
+  borderRadius: 0,
+  boxShadow: 'none',
+  cursor: 'initial',
+
+  '@desktop': {
+    borderRadius: theme.borderRadius.large,
+    boxShadow: theme.boxShadows.large,
+
+    '&:hover': {
+      borderRadius: theme.borderRadius.large,
+      boxShadow: theme.boxShadows.large,
+    },
+  },
+});
+
+const StyledContentContainer = styled(ContentContainer, {
+  padding: 0,
+
+  '@desktop': {
+    padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
+  },
+});
 
 const DetailsContainer = styled('div', {
-  marginTop: -CONTENT_CONTAINER_BORDER_RADIUS,
-  position: 'relative', // needed for negative margin over image (stacking context is ignored)
-  borderRadius: `${CONTENT_CONTAINER_BORDER_RADIUS}px ${CONTENT_CONTAINER_BORDER_RADIUS}px 0 0`,
-  backgroundColor: theme.colors.white,
-  padding: theme.space.large,
-});
+  background: `linear-gradient(45deg, ${theme.colors.white}, ${theme.colors.background})`,
+  padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
 
-const ContentHeaderContainer = styled('div', {
-  position: 'relative',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  marginBottom: theme.space.large,
-});
-
-const TitleText = styled('div', {
-  fontSize: theme.fontSizes.title,
-  fontWeight: 'bold',
-  color: theme.colors.primaryText,
-});
-
-const FlagContainer = styled('div', {
-  position: 'absolute',
-  top: 0,
-  bottom: 0,
-  right: 0,
+  '@desktop': {
+    padding: ` ${theme.space.extraLarge} 0`,
+  },
 });
 
 const DescriptionText = styled('div', {
   fontSize: theme.fontSizes.regular,
   color: theme.colors.primaryText,
-  marginBottom: theme.space.large,
+  marginBottom: theme.space.extraLarge,
 });
 
 const HeadingText = styled('div', {
@@ -154,7 +172,7 @@ const HeadingText = styled('div', {
 
 const DishesContainer = styled('div', {
   display: 'flex',
-  marginBottom: theme.space.large,
+  marginBottom: theme.space.extraLarge,
 });
 
 const DishContainer = styled('div', {
@@ -164,5 +182,5 @@ const DishContainer = styled('div', {
 const IngredientsContainer = styled('div', {});
 
 const IngredientContainer = styled('div', {
-  marginBottom: theme.space.small,
+  marginBottom: theme.space.large,
 });

@@ -2,6 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 import { styled, theme } from '../styles/stitches.config';
 
 interface CardProps {
+  className?: string;
   title: string;
   subtitle?: string;
   cornerComponent?: ReactNode;
@@ -9,13 +10,14 @@ interface CardProps {
 }
 
 export const Card = ({
+  className,
   title,
   subtitle,
   cornerComponent,
   children,
 }: CardProps): ReactElement => {
   return (
-    <Container>
+    <Container className={className}>
       {children}
 
       <TextContainer>

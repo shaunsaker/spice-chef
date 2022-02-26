@@ -24,6 +24,7 @@ const Container = styled('div', {
   backgroundColor: theme.colors.accent,
   padding: `${theme.space.small} ${theme.space.large}`,
   borderRadius: theme.borderRadius.small,
+  boxShadow: theme.boxShadows.small,
 });
 
 const Text = styled('div', {

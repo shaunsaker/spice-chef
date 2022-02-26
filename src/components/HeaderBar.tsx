@@ -8,12 +8,17 @@ import React, {
 import { styled, theme } from '../styles/stitches.config';
 import Link from 'next/link';
 import { ContentContainer } from './ContentContainer';
+import { BackIcon } from './BackIcon';
 
 interface HeaderBarProps {
+  showBack?: boolean;
   children?: ReactNode;
 }
 
-export const HeaderBar = ({ children }: HeaderBarProps): ReactElement => {
+export const HeaderBar = ({
+  showBack,
+  children,
+}: HeaderBarProps): ReactElement => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   const onBodyScroll = useCallback(() => {
@@ -37,6 +42,12 @@ export const HeaderBar = ({ children }: HeaderBarProps): ReactElement => {
       <Container hasScrolled={hasScrolled}>
         <StyledContentContainer>
           <LogoContainer>
+            {showBack && (
+              <BackIconContainer>
+                <BackIcon />
+              </BackIconContainer>
+            )}
+
             <Link href="/" passHref>
               <LogoText>
                 Spice{' '}
@@ -89,6 +100,10 @@ const StyledContentContainer = styled(ContentContainer, {
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: `0 ${theme.space.large}`,
+});
+
+const BackIconContainer = styled('div', {
+  marginRight: theme.space.large,
 });
 
 const LogoContainer = styled('div', {

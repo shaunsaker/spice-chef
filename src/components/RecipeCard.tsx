@@ -1,12 +1,16 @@
 import React, { ReactElement } from 'react';
-import { Recipe } from '../recipes/models';
+import { Recipe, RecipeIngredient } from '../recipes/models';
 import { styled } from '../styles/stitches.config';
 import { Card } from './Card';
 import { CountryFlag } from './CountryFlag';
 
-interface RecipeCardProps extends Recipe {}
+interface RecipeCardProps extends Omit<Recipe, 'ingredients'> {
+  className?: string;
+  ingredients?: RecipeIngredient[];
+}
 
 export const RecipeCard = ({
+  className,
   title,
   ingredients,
   imageUri,
@@ -14,8 +18,9 @@ export const RecipeCard = ({
 }: RecipeCardProps): ReactElement => {
   return (
     <Card
+      className={className}
       title={title}
-      subtitle={`${ingredients.length} ingredients`}
+      subtitle={ingredients && `${ingredients.length} ingredients`}
       cornerComponent={<CountryFlag countryCode={countryCode} />}
     >
       <BackgroundImage style={{ backgroundImage: `url(${imageUri})` }} />
