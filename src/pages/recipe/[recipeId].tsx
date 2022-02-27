@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { ReactElement } from 'react';
 import { Page } from '../../components/Page';
-import { Recipe as RecipeModel } from '../../recipes/models';
+import { Recipe as RecipeModel, RecipeIngredient } from '../../recipes/models';
 import recipesData from '../../data/recipes.json';
 import { ParsedUrlQuery } from 'querystring';
 import { objectToArray } from '../../utils/objectToArray';
@@ -16,6 +16,39 @@ import ShareIcon from '../../components/icons/share.svg';
 import { useShare } from '../../components/useShare';
 import Head from 'next/head';
 import { Grid } from '../../components/Grid';
+
+const sortIngredients = (
+  ingredients: RecipeIngredient[],
+): RecipeIngredient[] => {
+  // FIXME: this could be optimised to take an array of ingredient units sorted by weight and iterated on
+  // first group tbsp and tsp
+  // then sort each one largest to smallest
+  const sortedTbspIngredients = ingredients
+    .filter(ingredient => ingredient.unit === 'tbsp')
+    .sort((a, b) => {
+      if (a.quantity <= b.quantity) {
+        return 1;
+      }
+
+      return -1;
+    });
+
+  const sortedTspIngredients = ingredients
+    .filter(ingredient => ingredient.unit === 'tsp')
+    .sort((a, b) => {
+      if (a.quantity <= b.quantity) {
+        return 1;
+      }
+
+      return -1;
+    });
+
+  const sortedIngredients = [...sortedTbspIngredients, ...sortedTspIngredients];
+
+  console.log('HERE', sortedIngredients);
+
+  return sortedIngredients;
+};
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
@@ -118,7 +151,7 @@ export default function Recipe({ recipe }: Props): ReactElement {
               <IngredientsContainer>
                 <Grid
                   columns={2}
-                  data={recipe.ingredients}
+                  data={sortIngredients(recipe.ingredients)}
                   renderItem={ingredient => <IngredientCard {...ingredient} />}
                 />
               </IngredientsContainer>
