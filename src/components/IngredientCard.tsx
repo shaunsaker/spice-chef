@@ -35,7 +35,7 @@ export const IngredientCard = ({
           {toasted && (
             <StyledTippy content="Toast me">
               <IconContainer>
-                <SmallIconContainer size="small">
+                <SmallIconContainer>
                   <StyledFireIcon />
                 </SmallIconContainer>
               </IconContainer>
@@ -45,7 +45,7 @@ export const IngredientCard = ({
           {ground && (
             <StyledTippy content="Grind me">
               <IconContainer>
-                <SmallIconContainer size="small">
+                <SmallIconContainer>
                   <StyledCogIcon />
                 </SmallIconContainer>
               </IconContainer>
