@@ -53,7 +53,6 @@ const Container = styled('div', {
   height: CARD_HEIGHT,
   overflow: 'hidden',
   boxSizing: 'border-box',
-  boxShadow: theme.boxShadows.large,
   border: `${theme.borderWidths.small} solid ${theme.colors.white}`,
   transition: theme.transitions.default,
 
@@ -61,6 +60,7 @@ const Container = styled('div', {
     variant: {
       default: {
         cursor: 'pointer',
+        boxShadow: theme.boxShadows.large,
 
         '&:hover': {
           boxShadow: theme.boxShadows.veryLarge,
@@ -73,7 +73,6 @@ const Container = styled('div', {
       default: {},
       small: {
         height: 160,
-        boxShadow: theme.boxShadows.small,
 
         '& section': {
           padding: theme.space.small,

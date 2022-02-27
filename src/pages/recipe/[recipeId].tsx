@@ -152,11 +152,9 @@ const StyledRecipeCard = styled(RecipeCard, {
 
   '@desktop': {
     borderRadius: theme.borderRadius.large,
-    boxShadow: theme.boxShadows.large,
 
     '&:hover': {
       borderRadius: theme.borderRadius.large,
-      boxShadow: theme.boxShadows.large,
     },
   },
 });
