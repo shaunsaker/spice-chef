@@ -5,9 +5,8 @@ import React, {
   useCallback,
 } from 'react';
 import SearchIcon from './icons/search.svg';
+import CloseIcon from './icons/close.svg';
 import { styled, theme } from '../styles/stitches.config';
-
-const SEARCH_ICON_SIZE = 16;
 
 interface SearchInputProps {
   value: string;
@@ -29,6 +28,10 @@ export const SearchInput = ({
     [onChangeText],
   );
 
+  const onClearClick = useCallback(() => {
+    onChangeText('');
+  }, [onChangeText]);
+
   const onSubmit = useCallback(
     event => {
       // prevent default page reload
@@ -45,11 +48,7 @@ export const SearchInput = ({
   return (
     <Container onSubmit={onSubmit}>
       <SearchIconContainer>
-        <SearchIcon
-          width={SEARCH_ICON_SIZE}
-          height={SEARCH_ICON_SIZE}
-          fill={theme.colors.primaryText.toString()}
-        />
+        <StyledSearchIcon />
       </SearchIconContainer>
 
       <Input
@@ -58,6 +57,12 @@ export const SearchInput = ({
         value={value}
         onChange={onChange}
       />
+
+      {value.length ? (
+        <CloseIconContainer onClick={onClearClick}>
+          <StyledCloseIcon />
+        </CloseIconContainer>
+      ) : null}
     </Container>
   );
 };
@@ -68,15 +73,23 @@ const Container = styled('form', {
   margin: '0 auto',
 });
 
-const SEARCH_ICON_LEFT = 16;
+const ICON_MARGIN = 16;
 
 const SearchIconContainer = styled('div', {
   position: 'absolute',
   top: 0,
   bottom: 0,
-  left: SEARCH_ICON_LEFT,
+  left: ICON_MARGIN,
   display: 'flex',
   alignItems: 'center',
+});
+
+const ICON_SIZE = 16;
+
+const StyledSearchIcon = styled(SearchIcon, {
+  width: ICON_SIZE,
+  height: ICON_SIZE,
+  color: theme.colors.primaryText,
 });
 
 const HEIGHT = 40;
@@ -86,8 +99,9 @@ const Input = styled('input', {
   height: HEIGHT,
   borderRadius: theme.borderRadius.small,
   outline: 'none',
-  padding: `0 ${HEIGHT / 2}px`,
-  paddingLeft: SEARCH_ICON_LEFT + SEARCH_ICON_SIZE + 8,
+  padding: 0,
+  paddingLeft: ICON_MARGIN + ICON_SIZE + 8,
+  paddingRight: ICON_MARGIN + ICON_SIZE + 8,
   fontSize: theme.fontSizes.small,
   fontWeight: 600,
   color: theme.colors.primaryText,
@@ -106,4 +120,25 @@ const Input = styled('input', {
   '&::placeholder': {
     color: theme.colors.secondaryText,
   },
+});
+
+const CloseIconContainer = styled('div', {
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  right: ICON_MARGIN,
+  display: 'flex',
+  alignItems: 'center',
+  cursor: 'pointer',
+
+  '&:hover > svg': {
+    color: theme.colors.accent,
+  },
+});
+
+const StyledCloseIcon = styled(CloseIcon, {
+  width: ICON_SIZE,
+  height: ICON_SIZE,
+  color: theme.colors.primaryText,
+  transition: theme.transitions.default,
 });

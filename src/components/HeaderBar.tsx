@@ -41,22 +41,22 @@ export const HeaderBar = ({
     <Wrapper>
       <Container hasScrolled={hasScrolled}>
         <StyledContentContainer>
-          <LogoContainer>
-            {showBack && (
-              <BackIconContainer>
-                <BackIcon />
-              </BackIconContainer>
-            )}
+          <Link href="/" passHref>
+            <LogoContainer>
+              {showBack && (
+                <BackIconContainer>
+                  <BackIcon />
+                </BackIconContainer>
+              )}
 
-            <Link href="/" passHref>
               <LogoText>
                 Spice{' '}
                 <span style={{ color: theme.colors.primary.toString() }}>
                   Chef
                 </span>
               </LogoText>
-            </Link>
-          </LogoContainer>
+            </LogoContainer>
+          </Link>
 
           <RightContainer>{children}</RightContainer>
         </StyledContentContainer>

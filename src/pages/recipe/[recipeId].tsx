@@ -152,6 +152,7 @@ const StyledRecipeCard = styled(RecipeCard, {
 
   '@desktop': {
     borderRadius: theme.borderRadius.large,
+    border: `${theme.borderWidths.small} solid ${theme.colors.white}`,
 
     '&:hover': {
       borderRadius: theme.borderRadius.large,

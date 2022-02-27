@@ -18,6 +18,10 @@ export const BackIcon = ({}: BackIconProps): ReactElement => {
 const BackIconContainer = styled('div', {
   cursor: 'pointer',
   display: 'flex',
+
+  '&:hover > svg': {
+    color: theme.colors.accent,
+  },
 });
 
 const BACK_ICON_SIZE = 24;
@@ -26,4 +30,5 @@ const StyledIcon = styled(Icon, {
   width: BACK_ICON_SIZE,
   height: BACK_ICON_SIZE,
   color: theme.colors.primaryText,
+  transition: theme.transitions.default,
 });
