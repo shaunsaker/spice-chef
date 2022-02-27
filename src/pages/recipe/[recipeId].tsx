@@ -94,27 +94,41 @@ export default function Recipe({ recipe }: Props): ReactElement {
           />
 
           <DetailsContainer>
-            <DescriptionText>{recipe.description}</DescriptionText>
+            <SectionContainer>
+              <DescriptionText>{recipe.description}</DescriptionText>
+            </SectionContainer>
 
-            <HeadingText>Works well with</HeadingText>
+            <SectionContainer>
+              <HeadingText>Works well with</HeadingText>
 
-            <DishesContainer>
-              <Grid
-                columns={2}
-                data={recipe.dishes}
-                renderItem={dish => <DishCard {...dish} />}
-              />
-            </DishesContainer>
+              <DishesContainer>
+                <Grid
+                  columns={2}
+                  data={recipe.dishes}
+                  renderItem={dish => <DishCard {...dish} />}
+                />
+              </DishesContainer>
+            </SectionContainer>
 
-            <HeadingText>Ingredients ({recipe.ingredients.length})</HeadingText>
+            <SectionContainer>
+              <HeadingText>
+                Ingredients ({recipe.ingredients.length})
+              </HeadingText>
 
-            <IngredientsContainer>
-              <Grid
-                columns={2}
-                data={recipe.ingredients}
-                renderItem={ingredient => <IngredientCard {...ingredient} />}
-              />
-            </IngredientsContainer>
+              <IngredientsContainer>
+                <Grid
+                  columns={2}
+                  data={recipe.ingredients}
+                  renderItem={ingredient => <IngredientCard {...ingredient} />}
+                />
+              </IngredientsContainer>
+            </SectionContainer>
+
+            <SectionContainer>
+              <HeadingText>Method</HeadingText>
+
+              <DescriptionText>Mix thoroughly, celebrate 🎉</DescriptionText>
+            </SectionContainer>
           </DetailsContainer>
         </StyledContentContainer>
       </Container>
@@ -173,8 +187,13 @@ const DetailsContainer = styled('div', {
   padding: ` ${theme.space.extraLarge} ${theme.space.large}`,
 
   '@desktop': {
-    padding: ` ${theme.space.extraLarge} 0`,
+    padding: 0,
+    paddingTop: theme.space.extraLarge,
   },
+});
+
+const SectionContainer = styled('div', {
+  marginBottom: theme.space.extraLarge,
 });
 
 const DescriptionText = styled('div', {
