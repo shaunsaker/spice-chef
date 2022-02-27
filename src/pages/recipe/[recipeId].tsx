@@ -89,6 +89,8 @@ export default function Recipe({ recipe }: Props): ReactElement {
           <StyledRecipeCard {...recipe} ingredients={undefined} />
 
           <DetailsContainer>
+            <DescriptionText>{recipe.description}</DescriptionText>
+
             <HeadingText>Works well with</HeadingText>
 
             <DishesContainer>
@@ -100,8 +102,6 @@ export default function Recipe({ recipe }: Props): ReactElement {
             </DishesContainer>
 
             <HeadingText>Ingredients ({recipe.ingredients.length})</HeadingText>
-
-            <DescriptionText>{recipe.description}</DescriptionText>
 
             <IngredientsContainer>
               {recipe.ingredients.map(recipeIngredient => (
