@@ -1,17 +1,21 @@
 import React, { ReactElement } from 'react';
 import { styled, theme } from '../styles/stitches.config';
 
+type GridColumns = 1 | 2 | 4;
+
 interface GridProps<T> {
   data: T[];
+  columns: GridColumns;
   renderItem: (_item: T) => ReactElement;
 }
 
 export const Grid = <T extends { id: string }>({
   data,
+  columns,
   renderItem,
 }: GridProps<T>): ReactElement => {
   return (
-    <Container>
+    <Container columns={columns}>
       {data.map(item => {
         return <ItemContainer key={item.id}>{renderItem(item)}</ItemContainer>;
       })}
@@ -20,13 +24,36 @@ export const Grid = <T extends { id: string }>({
 };
 
 const Container = styled('div', {
+  width: '100%',
   display: 'grid',
-  gridTemplateColumns: '1fr',
+
   columnGap: theme.space.large,
   rowGap: theme.space.large,
 
-  '@tablet': {
-    gridTemplateColumns: '1fr 1fr',
+  variants: {
+    columns: {
+      1: {
+        gridTemplateColumns: '1fr',
+
+        '@tablet': {
+          gridTemplateColumns: '1fr 1fr',
+        },
+      },
+      2: {
+        gridTemplateColumns: '1fr 1fr',
+
+        '@mobileLarge': {
+          gridTemplateColumns: '1fr 1fr 1fr 1fr',
+        },
+      },
+      4: {
+        gridTemplateColumns: '1fr 1fr 1fr 1fr',
+
+        '@tablet': {
+          gridTemplateColumns: '1fr 1fr 1fr 1fr',
+        },
+      },
+    },
   },
 });
 

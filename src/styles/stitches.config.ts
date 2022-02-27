@@ -50,6 +50,7 @@ export const {
       large: '8px',
     },
     breakpoints: {
+      mobileLarge: '480px',
       tablet: '768px',
       desktop: '1024px',
     },
@@ -66,6 +67,7 @@ export const {
     },
   },
   media: {
+    mobileLarge: '(min-width: 480px)',
     tablet: '(min-width: 768px)',
     desktop: '(min-width: 1024px)',
   },

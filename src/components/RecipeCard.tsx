@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react';
 import { Recipe, RecipeIngredient } from '../recipes/models';
 import { styled } from '../styles/stitches.config';
-import { Card } from './Card';
+import { Card, CardVariant } from './Card';
 import { CountryFlag } from './CountryFlag';
 import Image from 'next/image';
 
 interface RecipeCardProps extends Omit<Recipe, 'ingredients'> {
   className?: string;
   ingredients?: RecipeIngredient[];
+  cardVariant?: CardVariant;
 }
 
 export const RecipeCard = ({
@@ -16,6 +17,7 @@ export const RecipeCard = ({
   ingredients,
   imageUri,
   countryCode,
+  cardVariant,
 }: RecipeCardProps): ReactElement => {
   return (
     <StyledCard
@@ -23,6 +25,7 @@ export const RecipeCard = ({
       title={title}
       subtitle={ingredients && `${ingredients.length} ingredients`}
       cornerComponent={<CountryFlag countryCode={countryCode} />}
+      variant={cardVariant}
     >
       <Image
         src={imageUri}

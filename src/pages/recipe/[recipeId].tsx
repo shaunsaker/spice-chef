@@ -7,7 +7,7 @@ import { ParsedUrlQuery } from 'querystring';
 import { objectToArray } from '../../utils/objectToArray';
 import { HeaderBar } from '../../components/HeaderBar';
 import { styled, theme } from '../../styles/stitches.config';
-import { DishChip } from '../../components/DishChip';
+import { DishCard } from '../../components/DishCard';
 import { IngredientCard } from '../../components/IngredientCard';
 import { ContentContainer } from '../../components/ContentContainer';
 import { RecipeCard } from '../../components/RecipeCard';
@@ -15,6 +15,7 @@ import { Footer } from '../../components/Footer';
 import ShareIcon from '../../components/icons/share.svg';
 import { useShare } from '../../components/useShare';
 import Head from 'next/head';
+import { Grid } from '../../components/Grid';
 
 interface Params extends ParsedUrlQuery {
   recipeId: string;
@@ -86,7 +87,11 @@ export default function Recipe({ recipe }: Props): ReactElement {
         </HeaderBar>
 
         <StyledContentContainer>
-          <StyledRecipeCard {...recipe} ingredients={undefined} />
+          <StyledRecipeCard
+            {...recipe}
+            ingredients={undefined}
+            cardVariant="paper"
+          />
 
           <DetailsContainer>
             <DescriptionText>{recipe.description}</DescriptionText>
@@ -94,11 +99,11 @@ export default function Recipe({ recipe }: Props): ReactElement {
             <HeadingText>Works well with</HeadingText>
 
             <DishesContainer>
-              {recipe.dishes.map(recipeDish => (
-                <DishContainer key={recipeDish.id}>
-                  <DishChip id={recipeDish.id} />
-                </DishContainer>
-              ))}
+              <Grid
+                columns={2}
+                data={recipe.dishes}
+                renderItem={dish => <DishCard {...dish} />}
+              />
             </DishesContainer>
 
             <HeadingText>Ingredients ({recipe.ingredients.length})</HeadingText>
@@ -144,7 +149,6 @@ const StyledRecipeCard = styled(RecipeCard, {
   border: 'none',
   borderRadius: 0,
   boxShadow: 'none',
-  cursor: 'initial',
 
   '@desktop': {
     borderRadius: theme.borderRadius.large,
@@ -190,10 +194,6 @@ const HeadingText = styled('div', {
 const DishesContainer = styled('div', {
   display: 'flex',
   marginBottom: theme.space.extraLarge,
-});
-
-const DishContainer = styled('div', {
-  marginRight: theme.space.small,
 });
 
 const IngredientsContainer = styled('div', {});

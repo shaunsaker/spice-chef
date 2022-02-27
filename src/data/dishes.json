@@ -1,38 +1,47 @@
 {
   "Stew": {
     "id": "Stew",
-    "title": "Stew"
+    "title": "Stew",
+    "emoji": "🥘"
   },
   "Soup": {
     "id": "Soup",
-    "title": "Soup"
+    "title": "Soup",
+    "emoji": "🍲"
   },
   "Steak": {
     "id": "Steak",
-    "title": "Steak"
+    "title": "Steak",
+    "emoji": "🥩"
   },
   "Chicken": {
     "id": "Chicken",
-    "title": "Chicken"
+    "title": "Chicken",
+    "emoji": "🍗"
   },
   "Lamb": {
     "id": "Lamb",
-    "title": "Lamb"
+    "title": "Lamb",
+    "emoji": "🐏"
   },
   "Salmon": {
     "id": "Salmon",
-    "title": "Salmon"
+    "title": "Salmon",
+    "emoji": "🐟"
   },
   "Vegetables": {
     "id": "Vegetables",
-    "title": "Vegetables"
+    "title": "Vegetables",
+    "emoji": "🍅"
   },
   "Bread": {
     "id": "Bread",
-    "title": "Bread"
+    "title": "Bread",
+    "emoji": "🍞"
   },
   "Rice": {
     "id": "Rice",
-    "title": "Rice"
+    "title": "Rice",
+    "emoji": "🍚"
   }
 }
