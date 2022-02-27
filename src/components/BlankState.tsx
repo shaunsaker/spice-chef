@@ -27,6 +27,7 @@ export const BlankState = ({
 
 const Container = styled('div', {
   backgroundColor: theme.colors.background,
+  height: 360,
 });
 
 const StyledContentContainer = styled(ContentContainer, {

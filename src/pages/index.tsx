@@ -4,7 +4,7 @@ import { Recipe } from '../recipes/models';
 import { SearchInput } from '../components/SearchInput';
 import recipesData from '../data/recipes.json';
 import { objectToArray } from '../utils/objectToArray';
-import { useCallback, useState } from 'react';
+import { createRef, useCallback, useState } from 'react';
 import { Page } from '../components/Page';
 import Link from 'next/link';
 import { HeaderBar } from '../components/HeaderBar';
@@ -34,6 +34,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Home({ recipes }: Props) {
   const [filter, setFilter] = useState('');
 
+  const recipesRef = createRef<HTMLDivElement>();
+
   const filteredRecipes =
     filter.length > 1
       ? recipes.filter(recipe =>
@@ -45,6 +47,11 @@ export default function Home({ recipes }: Props) {
     setFilter(text);
   }, []);
 
+  const onSubmitFilter = useCallback(() => {
+    // scroll to the recipes section
+    recipesRef.current.scrollIntoView({ behavior: 'smooth' });
+  }, [recipesRef]);
+
   return (
     <Page>
       <HeaderBar />
@@ -52,32 +59,38 @@ export default function Home({ recipes }: Props) {
       <Hero />
 
       <SearchInputContainer>
-        <SearchInput value={filter} onChangeText={onChangeFilter} />
+        <SearchInput
+          value={filter}
+          onChangeText={onChangeFilter}
+          onSubmit={onSubmitFilter}
+        />
       </SearchInputContainer>
 
       {/* FIXME: extract to component */}
-      {filteredRecipes.length ? (
-        <StyledContentContainer>
-          <Grid
-            columns={1}
-            data={filteredRecipes}
-            renderItem={recipe => (
-              <Link href={`/recipe/${recipe.id}`} passHref>
-                <div>
-                  <RecipeCard {...recipe} />
-                </div>
-              </Link>
-            )}
-          />
-        </StyledContentContainer>
-      ) : (
-        <BlankStateContainer>
-          <BlankState
-            title="No Comprende"
-            description="We either couldn't find what you're looking for or that recipe has alluded us."
-          />
-        </BlankStateContainer>
-      )}
+      <div ref={recipesRef}>
+        {filteredRecipes.length ? (
+          <StyledContentContainer>
+            <Grid
+              columns={1}
+              data={filteredRecipes}
+              renderItem={recipe => (
+                <Link href={`/recipe/${recipe.id}`} passHref>
+                  <div>
+                    <RecipeCard {...recipe} />
+                  </div>
+                </Link>
+              )}
+            />
+          </StyledContentContainer>
+        ) : (
+          <BlankStateContainer>
+            <BlankState
+              title="No Comprende"
+              description="We either couldn't find what you're looking for or that recipe has alluded us."
+            />
+          </BlankStateContainer>
+        )}
+      </div>
 
       <Footer />
     </Page>

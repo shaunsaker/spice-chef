@@ -1,4 +1,9 @@
-import React, { ChangeEvent, ReactElement, useCallback } from 'react';
+import React, {
+  ChangeEvent,
+  createRef,
+  ReactElement,
+  useCallback,
+} from 'react';
 import SearchIcon from './icons/search.svg';
 import { styled, theme } from '../styles/stitches.config';
 
@@ -7,12 +12,16 @@ const SEARCH_ICON_SIZE = 16;
 interface SearchInputProps {
   value: string;
   onChangeText: (_text: string) => void;
+  onSubmit: () => void;
 }
 
 export const SearchInput = ({
   value,
   onChangeText,
+  onSubmit: onSubmitCb,
 }: SearchInputProps): ReactElement => {
+  const ref = createRef<HTMLInputElement>();
+
   const onChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       onChangeText(event.target.value);
@@ -20,8 +29,21 @@ export const SearchInput = ({
     [onChangeText],
   );
 
+  const onSubmit = useCallback(
+    event => {
+      // prevent default page reload
+      event.preventDefault();
+
+      // dismiss the keyboard on mobile
+      ref.current.blur();
+
+      onSubmitCb();
+    },
+    [ref, onSubmitCb],
+  );
+
   return (
-    <Container>
+    <Container onSubmit={onSubmit}>
       <SearchIconContainer>
         <SearchIcon
           width={SEARCH_ICON_SIZE}
@@ -31,7 +53,8 @@ export const SearchInput = ({
       </SearchIconContainer>
 
       <Input
-        placeholder="Search for recipes..."
+        ref={ref}
+        placeholder="Search for Spice Recipes..."
         value={value}
         onChange={onChange}
       />
@@ -39,7 +62,7 @@ export const SearchInput = ({
   );
 };
 
-const Container = styled('div', {
+const Container = styled('form', {
   position: 'relative',
   maxWidth: 360,
   margin: '0 auto',
