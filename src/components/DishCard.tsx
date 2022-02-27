@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import dishesData from '../data/dishes.json';
-import { styled, theme } from '../styles/stitches.config';
+import { styled } from '../styles/stitches.config';
 import { RecipeDish } from '../recipes/models';
 import { Dish } from '../dishes/models';
 import { Card } from './Card';
@@ -15,26 +15,14 @@ export const DishCard = ({ id }: DishChipProps): ReactElement => {
   }
 
   return (
-    <StyledCard title={dish.title} variant="paper">
+    <StyledCard title={dish.title} variant="paper" size="small">
       <EmojiContainer>{dish.emoji}</EmojiContainer>
     </StyledCard>
   );
 };
 
-const CARD_HEIGHT = 160;
-
 const StyledCard = styled(Card, {
-  maxHeight: CARD_HEIGHT, // this applies the height style 🤷‍♂️
-
-  '& section': {
-    padding: theme.space.small,
-  },
-
-  '& h1': {
-    fontFamily: theme.fonts.primary,
-    fontSize: theme.fontSizes.regular,
-    textAlign: 'center',
-  },
+  height: 160,
 });
 
 const EmojiContainer = styled('div', {

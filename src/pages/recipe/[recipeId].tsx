@@ -109,11 +109,11 @@ export default function Recipe({ recipe }: Props): ReactElement {
             <HeadingText>Ingredients ({recipe.ingredients.length})</HeadingText>
 
             <IngredientsContainer>
-              {recipe.ingredients.map(recipeIngredient => (
-                <IngredientContainer key={recipeIngredient.id}>
-                  <IngredientCard {...recipeIngredient} />
-                </IngredientContainer>
-              ))}
+              <Grid
+                columns={2}
+                data={recipe.ingredients}
+                renderItem={ingredient => <IngredientCard {...ingredient} />}
+              />
             </IngredientsContainer>
           </DetailsContainer>
         </StyledContentContainer>
@@ -197,7 +197,3 @@ const DishesContainer = styled('div', {
 });
 
 const IngredientsContainer = styled('div', {});
-
-const IngredientContainer = styled('div', {
-  marginBottom: theme.space.large,
-});

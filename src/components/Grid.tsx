@@ -42,7 +42,7 @@ const Container = styled('div', {
       2: {
         gridTemplateColumns: '1fr 1fr',
 
-        '@mobileLarge': {
+        '@tablet': {
           gridTemplateColumns: '1fr 1fr 1fr 1fr',
         },
       },

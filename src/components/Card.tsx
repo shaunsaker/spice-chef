@@ -3,12 +3,15 @@ import { styled, theme } from '../styles/stitches.config';
 
 export type CardVariant = 'default' | 'paper';
 
+export type CardSize = 'default' | 'small';
+
 interface CardProps {
   className?: string;
   title: string;
   subtitle?: string;
   cornerComponent?: ReactNode;
   variant?: CardVariant;
+  size?: CardSize;
   children?: ReactNode;
 }
 
@@ -18,10 +21,11 @@ export const Card = ({
   subtitle,
   cornerComponent,
   variant = 'default',
+  size = 'default',
   children,
 }: CardProps): ReactElement => {
   return (
-    <Container className={className} variant={variant}>
+    <Container className={className} variant={variant} size={size}>
       {children}
 
       <TextContainer>
@@ -30,7 +34,9 @@ export const Card = ({
         {subtitle && <SubtitleText>{subtitle}</SubtitleText>}
       </TextContainer>
 
-      {cornerComponent && <CornerContainer>{cornerComponent}</CornerContainer>}
+      {cornerComponent && (
+        <CornerContainer size={size}>{cornerComponent}</CornerContainer>
+      )}
     </Container>
   );
 };
@@ -63,6 +69,23 @@ const Container = styled('div', {
       },
       paper: {},
     },
+    size: {
+      default: {},
+      small: {
+        height: 160,
+        boxShadow: theme.boxShadows.small,
+
+        '& section': {
+          padding: theme.space.small,
+        },
+
+        '& h1': {
+          fontFamily: theme.fonts.primary,
+          fontSize: theme.fontSizes.regular,
+          textAlign: 'center',
+        },
+      },
+    },
   },
 });
 
@@ -91,5 +114,15 @@ const CornerContainer = styled('div', {
   position: 'absolute',
   top: 0,
   right: 0,
-  padding: theme.space.large,
+
+  variants: {
+    size: {
+      default: {
+        padding: theme.space.large,
+      },
+      small: {
+        padding: theme.space.small,
+      },
+    },
+  },
 });

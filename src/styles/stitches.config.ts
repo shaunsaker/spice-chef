@@ -41,6 +41,7 @@ export const {
       small: '16px',
     },
     space: {
+      verySmall: '4px',
       small: '8px',
       large: '16px',
       extraLarge: '32px',
@@ -50,7 +51,6 @@ export const {
       large: '8px',
     },
     breakpoints: {
-      mobileLarge: '480px',
       tablet: '768px',
       desktop: '1024px',
     },
@@ -67,7 +67,6 @@ export const {
     },
   },
   media: {
-    mobileLarge: '(min-width: 480px)',
     tablet: '(min-width: 768px)',
     desktop: '(min-width: 1024px)',
   },
