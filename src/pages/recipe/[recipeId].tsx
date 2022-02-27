@@ -45,8 +45,6 @@ const sortIngredients = (
 
   const sortedIngredients = [...sortedTbspIngredients, ...sortedTspIngredients];
 
-  console.log('HERE', sortedIngredients);
-
   return sortedIngredients;
 };
 
